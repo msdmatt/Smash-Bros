@@ -31,6 +31,8 @@ class BasicMode: UIViewController {
     @IBOutlet weak var player4Label: UILabel!
     @IBOutlet weak var player3Character: UIImageView!
     @IBOutlet weak var player4Character: UIImageView!
+    @IBOutlet weak var team1View: UIView!
+    @IBOutlet weak var team2View: UIView!
     
 
 // Constants and Variables
@@ -110,7 +112,38 @@ class BasicMode: UIViewController {
         homeButton.layer.cornerRadius = 7;
         letsPlayButton.layer.cornerRadius = 7;
         team1WinButton.layer.cornerRadius = 7;
-        team2WinButton.layer.cornerRadius = 7}
+        team2WinButton.layer.cornerRadius = 7;
+        player1Label.layer.masksToBounds = true;
+        player1Label.layer.cornerRadius = 7;
+        player1Label.layer.maskedCorners = [.layerMinXMinYCorner];
+        player2Label.layer.masksToBounds = true;
+        player2Label.layer.cornerRadius = 7;
+        player2Label.layer.maskedCorners = [.layerMaxXMinYCorner];
+        player3Label.layer.masksToBounds = true;
+        player3Label.layer.cornerRadius = 7;
+        player3Label.layer.maskedCorners = [.layerMinXMinYCorner];
+        player4Label.layer.masksToBounds = true;
+        player4Label.layer.cornerRadius = 7;
+        player4Label.layer.maskedCorners = [.layerMaxXMinYCorner];
+        player1Character.layer.masksToBounds = true;
+        player1Character.layer.cornerRadius = 7;
+        player1Character.layer.maskedCorners = [.layerMinXMaxYCorner];
+        player2Character.layer.masksToBounds = true;
+        player2Character.layer.cornerRadius = 7;
+        player2Character.layer.maskedCorners = [.layerMaxXMaxYCorner];
+        player3Character.layer.masksToBounds = true;
+        player3Character.layer.cornerRadius = 7;
+        player3Character.layer.maskedCorners = [.layerMinXMaxYCorner];
+        player4Character.layer.masksToBounds = true;
+        player4Character.layer.cornerRadius = 7;
+        player4Character.layer.maskedCorners = [.layerMaxXMaxYCorner];
+        stageLabel.layer.masksToBounds = true;
+        stageLabel.layer.cornerRadius = 7;
+        stageLabel.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner];
+        stageImage.layer.masksToBounds = true;
+        stageImage.layer.cornerRadius = 7;
+        stageImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+    }
     
     func randomizeTeams(){
         randomPlayer1Index = Int.random(in: 0...3)

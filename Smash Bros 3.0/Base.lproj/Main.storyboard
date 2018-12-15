@@ -33,35 +33,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hP9-P5-mMU" userLabel="NamesStack">
                                 <rect key="frame" x="40" y="110" width="229" height="180"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVO-3u-gQC" userLabel="Player1Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Chris" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVO-3u-gQC" userLabel="Player1Name">
                                         <rect key="frame" x="0.0" y="0.0" width="229" height="24"/>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rich" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-P9-ZEB" userLabel="Player2Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Rich" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b3-P9-ZEB" userLabel="Player2Name">
                                         <rect key="frame" x="0.0" y="39" width="229" height="24"/>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMU-uf-VFU" userLabel="Player3Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Jeff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMU-uf-VFU" userLabel="Player3Name">
                                         <rect key="frame" x="0.0" y="78" width="229" height="24"/>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dif-JZ-pQY" userLabel="Player4Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Matt" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dif-JZ-pQY" userLabel="Player4Name">
                                         <rect key="frame" x="0.0" y="117" width="229" height="24"/>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-aB-Zs0" userLabel="Player5Name">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Kat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-aB-Zs0" userLabel="Player5Name">
                                         <rect key="frame" x="0.0" y="156" width="229" height="24"/>
                                         <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -206,8 +206,11 @@
                         <outlet property="chrisScore" destination="d48-8w-MAl" id="YvM-xB-vJz"/>
                         <outlet property="jeffLabel" destination="sMU-uf-VFU" id="fH6-7D-Y4o"/>
                         <outlet property="jeffScore" destination="Ofr-zd-iLt" id="ROD-yk-IPA"/>
+                        <outlet property="katLabel" destination="vSb-aB-Zs0" id="Rse-sj-z7t"/>
+                        <outlet property="katScore" destination="MZZ-Lu-Db4" id="l4N-dq-uKS"/>
                         <outlet property="mattLabel" destination="dif-JZ-pQY" id="wG2-7f-aJ3"/>
                         <outlet property="mattScore" destination="qcs-FO-kAF" id="VYW-dZ-N3R"/>
+                        <outlet property="playerScoresLabel" destination="5Js-Xe-p2B" id="yMm-V1-Vk9"/>
                         <outlet property="richLabel" destination="5b3-P9-ZEB" id="baM-5A-IJa"/>
                         <outlet property="richScore" destination="MM7-qg-Kq6" id="hHg-A0-BKn"/>
                     </connections>
@@ -308,7 +311,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="RtJ-Lp-4Tu" firstAttribute="leading" secondItem="WDN-8x-rIQ" secondAttribute="leading" id="00k-8d-XpG"/>
                                     <constraint firstAttribute="trailing" secondItem="ABE-7a-MrZ" secondAttribute="trailing" id="4Ah-Vz-agP"/>
@@ -341,7 +344,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Team1WinButton:" destination="uxX-sf-tzv" eventType="touchUpInside" id="Ndu-Ez-1NX"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Xeh-B1-atV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stage Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yne-ge-Ij2" userLabel="StageLabel">
@@ -356,6 +358,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5y-dK-mx9" userLabel="StageButton">
                                 <rect key="frame" x="10" y="242" width="355" height="183"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="StageButton:" destination="uxX-sf-tzv" eventType="touchUpInside" id="B1L-dN-hhS"/>
@@ -420,7 +423,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qW4-uO-xeq" secondAttribute="trailing" id="4iT-l4-hkn"/>
                                     <constraint firstItem="4Om-C5-Udn" firstAttribute="top" secondItem="hHV-YZ-JWf" secondAttribute="top" id="9By-Up-s9A"/>
@@ -455,7 +458,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Team2WinButton:" destination="uxX-sf-tzv" eventType="touchUpInside" id="txD-Se-CpQ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="bMK-I2-w6F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKs-8q-ik1">
@@ -524,8 +526,10 @@
                         <outlet property="stageImage" destination="Y87-zN-nqh" id="URl-Y3-4nz"/>
                         <outlet property="stageLabel" destination="yne-ge-Ij2" id="RgJ-RJ-t9n"/>
                         <outlet property="team1Button" destination="QQh-qe-ZIN" id="anp-qp-rUj"/>
+                        <outlet property="team1View" destination="WDN-8x-rIQ" id="NZc-aq-EqK"/>
                         <outlet property="team1WinButton" destination="JEl-SR-SnL" id="4Jv-Kr-7c0"/>
                         <outlet property="team2Button" destination="qW4-uO-xeq" id="V10-fj-jjF"/>
+                        <outlet property="team2View" destination="hHV-YZ-JWf" id="Kot-AU-bik"/>
                         <outlet property="team2WinButton" destination="jl1-Qb-wVK" id="Sjf-0t-8KS"/>
                     </connections>
                 </viewController>
@@ -536,6 +540,5 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Kbw-ej-Mo2"/>
-        <segue reference="Xeh-B1-atV"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,6 +22,9 @@ class MainController: UIViewController {
     @IBOutlet weak var jeffScore: UILabel!
     @IBOutlet weak var mattLabel: UILabel!
     @IBOutlet weak var mattScore: UILabel!
+    @IBOutlet weak var katLabel: UILabel!
+    @IBOutlet weak var katScore: UILabel!
+    @IBOutlet weak var playerScoresLabel: UILabel!
     
     var chrisScoreTotal:Int = 0
 
@@ -35,10 +38,22 @@ class MainController: UIViewController {
         roundEdges()}
     
     func roundEdges() {
+        playerScoresLabel.layer.masksToBounds = true;
+        playerScoresLabel.layer.cornerRadius = 7;
         BasicModeLoadButton.layer.cornerRadius = 7;
         ChooseOpponentsLoadButton.layer.cornerRadius = 7;
         SameCharLoadButton.layer.cornerRadius = 7;
         WorstCharLoadButton.layer.cornerRadius = 7;
+        chrisLabel.layer.masksToBounds = true;
+        chrisScore.layer.masksToBounds = true;
+        richLabel.layer.masksToBounds = true;
+        richScore.layer.masksToBounds = true;
+        jeffLabel.layer.masksToBounds = true;
+        jeffScore.layer.masksToBounds = true;
+        mattLabel.layer.masksToBounds = true;
+        mattScore.layer.masksToBounds = true;
+        katLabel.layer.masksToBounds = true;
+        katScore.layer.masksToBounds = true;
         chrisLabel.layer.cornerRadius = 7;
         chrisScore.layer.cornerRadius = 7;
         richLabel.layer.cornerRadius = 7;
@@ -46,7 +61,9 @@ class MainController: UIViewController {
         jeffLabel.layer.cornerRadius = 7;
         jeffScore.layer.cornerRadius = 7;
         mattLabel.layer.cornerRadius = 7;
-        mattScore.layer.cornerRadius = 7}
+        mattScore.layer.cornerRadius = 7;
+        katLabel.layer.cornerRadius = 7;
+        katScore.layer.cornerRadius = 7}
     
     
     
