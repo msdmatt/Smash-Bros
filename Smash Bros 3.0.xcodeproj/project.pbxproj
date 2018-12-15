@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		211F630C21C2012F00ED2305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F630B21C2012F00ED2305 /* AppDelegate.swift */; };
-		211F630E21C2012F00ED2305 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F630D21C2012F00ED2305 /* ViewController.swift */; };
+		211F630E21C2012F00ED2305 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F630D21C2012F00ED2305 /* MainController.swift */; };
 		211F631121C2012F00ED2305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211F630F21C2012F00ED2305 /* Main.storyboard */; };
 		211F631321C2012F00ED2305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211F631221C2012F00ED2305 /* Assets.xcassets */; };
 		211F631621C2012F00ED2305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211F631421C2012F00ED2305 /* LaunchScreen.storyboard */; };
+		211F631E21C201FE00ED2305 /* BasicMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F631D21C201FE00ED2305 /* BasicMode.swift */; };
+		211F632221C2021C00ED2305 /* forReferenceOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F632121C2021C00ED2305 /* forReferenceOnly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		211F630821C2012F00ED2305 /* Smash Bros 3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash Bros 3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		211F630B21C2012F00ED2305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		211F630D21C2012F00ED2305 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		211F630D21C2012F00ED2305 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		211F631021C2012F00ED2305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		211F631221C2012F00ED2305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211F631521C2012F00ED2305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		211F631721C2012F00ED2305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		211F631D21C201FE00ED2305 /* BasicMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMode.swift; sourceTree = "<group>"; };
+		211F632121C2021C00ED2305 /* forReferenceOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forReferenceOnly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				211F630B21C2012F00ED2305 /* AppDelegate.swift */,
-				211F630D21C2012F00ED2305 /* ViewController.swift */,
+				211F630D21C2012F00ED2305 /* MainController.swift */,
+				211F631D21C201FE00ED2305 /* BasicMode.swift */,
 				211F630F21C2012F00ED2305 /* Main.storyboard */,
+				211F632321C202D100ED2305 /* References */,
 				211F631221C2012F00ED2305 /* Assets.xcassets */,
 				211F631421C2012F00ED2305 /* LaunchScreen.storyboard */,
 				211F631721C2012F00ED2305 /* Info.plist */,
 			);
 			path = "Smash Bros 3.0";
+			sourceTree = "<group>";
+		};
+		211F632321C202D100ED2305 /* References */ = {
+			isa = PBXGroup;
+			children = (
+				211F632121C2021C00ED2305 /* forReferenceOnly.swift */,
+			);
+			path = References;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				211F630E21C2012F00ED2305 /* ViewController.swift in Sources */,
+				211F630E21C2012F00ED2305 /* MainController.swift in Sources */,
+				211F631E21C201FE00ED2305 /* BasicMode.swift in Sources */,
+				211F632221C2021C00ED2305 /* forReferenceOnly.swift in Sources */,
 				211F630C21C2012F00ED2305 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dishafish.Smash-Bros-3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "dishafish.Smash-Bros-3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
