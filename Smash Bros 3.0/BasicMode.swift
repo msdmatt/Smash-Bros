@@ -91,8 +91,6 @@ class BasicMode: UIViewController {
 // Don't forget to do if statements based on which mode you're in
     
     func hideButtons() {
-        team1WinButton.isHidden = true;
-        team2WinButton.isHidden = true;
         team1Button.isHidden = true;
         team2Button.isHidden = true;
         stageButton.isHidden = true;
@@ -100,13 +98,36 @@ class BasicMode: UIViewController {
         team2Button.isHidden = true}
         
     func unhideButtons(){
-        team1WinButton.isHidden = false;
-        team2WinButton.isHidden = false;
         team1Button.isHidden = false;
         team2Button.isHidden = false;
         stageButton.isHidden = false;
         team1Button.isHidden = false;
         team2Button.isHidden = false}
+    
+    func hideImages(){
+        player1Label.isHidden = true;
+        player2Label.isHidden = true;
+        player3Label.isHidden = true;
+        player4Label.isHidden = true;
+        stageLabel.isHidden = true;
+        stageImage.isHidden = true;
+        player1Character.isHidden = true;
+        player2Character.isHidden = true;
+        player3Character.isHidden = true;
+        player4Character.isHidden = true}
+    
+    func unHideImages(){
+        player1Label.isHidden = false;
+        player2Label.isHidden = false;
+        player3Label.isHidden = false;
+        player4Label.isHidden = false;
+        stageLabel.isHidden = false;
+        stageImage.isHidden = false;
+        player1Character.isHidden = false;
+        player2Character.isHidden = false;
+        player3Character.isHidden = false;
+        player4Character.isHidden = false
+    }
         
     func adjustLabelsButtonsBorders(){
         homeButton.layer.cornerRadius = 7;

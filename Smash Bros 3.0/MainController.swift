@@ -26,8 +26,6 @@ class MainController: UIViewController {
     @IBOutlet weak var katScore: UILabel!
     @IBOutlet weak var playerScoresLabel: UILabel!
     
-    var chrisScoreTotal:Int = 0
-
     @IBAction func BasicModeLoadAction(_ sender: Any) {}
     @IBAction func ChooseOpponentsAction(_ sender: Any) {}
     @IBAction func SameCharAction(_ sender: Any) {}
