@@ -126,9 +126,8 @@ class BasicMode: UIViewController {
         player1Character.isHidden = false;
         player2Character.isHidden = false;
         player3Character.isHidden = false;
-        player4Character.isHidden = false
-    }
-        
+        player4Character.isHidden = false}
+    
     func adjustLabelsButtonsBorders(){
         homeButton.layer.cornerRadius = 7;
         letsPlayButton.layer.cornerRadius = 7;
@@ -166,8 +165,7 @@ class BasicMode: UIViewController {
         stageImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         modeButton.layer.masksToBounds = true;
         modeButton.layer.cornerRadius = 7;
-        modeButton.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner,.layerMinXMinYCorner,.layerMaxXMinYCorner]
-    }
+        modeButton.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner,.layerMinXMinYCorner,.layerMaxXMinYCorner]}
     
     func randomizeTeams(){
         randomPlayer1Index = Int.random(in: 0...3)
