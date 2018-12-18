@@ -13,6 +13,7 @@ class ModeViewController: UIViewController {
     
 // Buttons and Labels from ViewController
     @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var statsButton: UIButton!
     @IBOutlet weak var team1Button: UIButton!
     @IBOutlet weak var team1WinButton: UIButton!
     @IBOutlet weak var stageButton: UIButton!
@@ -135,6 +136,7 @@ class ModeViewController: UIViewController {
     
     func adjustLabelsButtonsBorders(){
         homeButton.layer.cornerRadius = 7;
+        statsButton.layer.cornerRadius = 7;
         letsPlayButton.layer.cornerRadius = 7;
         team1WinButton.layer.cornerRadius = 7;
         team2WinButton.layer.cornerRadius = 7;
@@ -169,8 +171,7 @@ class ModeViewController: UIViewController {
         stageImage.layer.cornerRadius = 7;
         stageImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         modeButton.layer.masksToBounds = true;
-        modeButton.layer.cornerRadius = 7;
-        modeButton.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner,.layerMinXMinYCorner,.layerMaxXMinYCorner]}
+        modeButton.layer.cornerRadius = 7}
     
     func randomizeTeams(){
         randomPlayer1Index = Int.random(in: 0...3)
