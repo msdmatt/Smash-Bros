@@ -119,7 +119,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-or-Cfb" userLabel="ModesStack">
                                 <rect key="frame" x="10" y="393" width="355" height="264"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-kl-Ay6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-kl-Ay6" customClass="basicModeButton">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
                                         <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
@@ -130,10 +130,9 @@
                                         </state>
                                         <connections>
                                             <action selector="BasicModeLoadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3T-2w-mEb"/>
-                                            <segue destination="uxX-sf-tzv" kind="show" id="mBa-h7-UC5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMI-5k-Agb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMI-5k-Agb" customClass="opponentsButton">
                                         <rect key="frame" x="0.0" y="68" width="355" height="60"/>
                                         <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
@@ -144,10 +143,9 @@
                                         </state>
                                         <connections>
                                             <action selector="ChooseOpponentsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQt-B9-zmG"/>
-                                            <segue destination="uxX-sf-tzv" kind="show" id="jmB-y7-tk0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWm-Nt-EAO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWm-Nt-EAO" customClass="sameCharacterButton">
                                         <rect key="frame" x="0.0" y="136" width="355" height="60"/>
                                         <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
@@ -158,7 +156,6 @@
                                         </state>
                                         <connections>
                                             <action selector="SameCharAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUt-wu-vrf"/>
-                                            <segue destination="uxX-sf-tzv" kind="show" id="Kbw-ej-Mo2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJH-ov-tPx">
@@ -212,6 +209,7 @@
                         <outlet property="playerScoresLabel" destination="5Js-Xe-p2B" id="yMm-V1-Vk9"/>
                         <outlet property="richLabel" destination="5b3-P9-ZEB" id="baM-5A-IJa"/>
                         <outlet property="richScore" destination="MM7-qg-Kq6" id="hHg-A0-BKn"/>
+                        <segue destination="uxX-sf-tzv" kind="show" identifier="goToModeScreen" id="aW6-Ol-Vl5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -221,7 +219,7 @@
         <!--BasicMode-->
         <scene sceneID="Drp-bL-8KX">
             <objects>
-                <viewController id="uxX-sf-tzv" userLabel="BasicMode" customClass="BasicMode" customModule="Smash_Bros_3_0" sceneMemberID="viewController">
+                <viewController id="uxX-sf-tzv" userLabel="BasicMode" customClass="ModeViewController" customModule="Smash_Bros_3_0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M9Z-nu-GaM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,7 +536,4 @@
             <point key="canvasLocation" x="1084" y="133"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="jmB-y7-tk0"/>
-    </inferredMetricsTieBreakers>
 </document>

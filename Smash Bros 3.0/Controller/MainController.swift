@@ -26,11 +26,27 @@ class MainController: UIViewController {
     @IBOutlet weak var katScore: UILabel!
     @IBOutlet weak var playerScoresLabel: UILabel!
     
-    @IBAction func BasicModeLoadAction(_ sender: Any) {}
-    @IBAction func ChooseOpponentsAction(_ sender: Any) {}
-    @IBAction func SameCharAction(_ sender: Any) {}
+    @IBAction func BasicModeLoadAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToModeScreen", sender: self)
+    }
+    @IBAction func ChooseOpponentsAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToModeScreen", sender: self)
+    }
+    @IBAction func SameCharAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToModeScreen", sender: self)
+    }
     @IBAction func WorstCharAction(_ sender: Any) {}
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToModeScreen" && BasicModeLoadButton.isTouchInside == true {
+            let destinationVC = segue.destination as! ModeViewController
+            destinationVC.modeIntPassed = 1}
+        else if segue.identifier == "goToModeScreen" && ChooseOpponentsLoadButton.isTouchInside == true {
+            let destinationVC = segue.destination as! ModeViewController
+            destinationVC.modeIntPassed = 2}
+        else if segue.identifier == "goToModeScreen" && SameCharLoadButton.isTouchInside == true {
+            let destinationVC = segue.destination as! ModeViewController
+            destinationVC.modeIntPassed = 3}}
     
     override func viewDidLoad() {super.viewDidLoad();
         roundEdges()}

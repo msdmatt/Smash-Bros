@@ -1,5 +1,5 @@
 //
-//  BasicMode.swift
+//  ModeViewController.swift
 //  Smash Bros 3.0
 //
 //  Created by Matthew Disharoon on 12/12/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicMode: UIViewController {
+class ModeViewController: UIViewController {
     
     
 // Buttons and Labels from ViewController
@@ -61,10 +61,15 @@ class BasicMode: UIViewController {
     var randomTeams:Int = 0
     var randomStage:Int = 0
     
+    var modeIntPassed:Int?
+    
     
 // Actions go here
     override func viewDidLoad() {super.viewDidLoad()
-        adjustLabelsButtonsBorders();disableScreen()}
+        adjustLabelsButtonsBorders();disableScreen()
+        if modeIntPassed == 1 {modeButton.setTitle("Basic Mode", for: UIControl.State.normal)}
+        else if modeIntPassed == 2 {modeButton.setTitle("Opponents", for: UIControl.State.normal)}
+        else if modeIntPassed == 3 {modeButton.setTitle("Same character", for: UIControl.State.normal)}}
     
     @IBAction func ModeButton(_ sender: Any) {changeMode();disableScreen()}
     
