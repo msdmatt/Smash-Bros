@@ -16,3 +16,8 @@ import Foundation
 
 //Button background color = peter river
 //#3498db
+
+//Websites for coding
+    // canva.com to make pictures into icons
+    // appicon.co to make variouus icon sizes from pictures
+    // flatuicolors.com - background colors
