@@ -80,10 +80,10 @@ class BasicMode: UIViewController {
     
     @IBAction func LetsPlayButton(_ sender: Any) {
         enableScreen();
-        if modeButton.currentTitle == "Basic Mode" {randomizeTeams();randomizeCharacter();randomizeStage()}
-        else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeCharacter();randomizeStage()}
+        if modeButton.currentTitle == "Basic Mode" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
         else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
-        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeCharacter();randomizeStage()}}
+        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}}
 
     
     
@@ -202,7 +202,7 @@ class BasicMode: UIViewController {
         if player2Label.text == player4Label.text {randomizeTeams()}
         if player3Label.text == player4Label.text {randomizeTeams()}}
 
-    func randomizeCharacter(){
+    func randomizeAllCharacter(){
         randomPlayer1CharImage = Int.random(in: 0...48)
         player1Character.image = UIImage(named: characterImageArray[randomPlayer1CharImage])
         randomPlayer2CharImage = Int.random(in: 0...48)
@@ -211,12 +211,12 @@ class BasicMode: UIViewController {
         player3Character.image = UIImage(named: characterImageArray[randomPlayer3CharImage])
         randomPlayer4CharImage = Int.random(in: 0...48)
         player4Character.image = UIImage(named: characterImageArray[randomPlayer4CharImage])
-        if player1Character.image == player2Character.image {randomizeCharacter()}
-        if player1Character.image == player3Character.image {randomizeCharacter()}
-        if player1Character.image == player4Character.image {randomizeCharacter()}
-        if player2Character.image == player3Character.image {randomizeCharacter()}
-        if player2Character.image == player4Character.image {randomizeCharacter()}
-        if player3Character.image == player4Character.image {randomizeCharacter()}}
+        if player1Character.image == player2Character.image {randomizeAllCharacter()}
+        if player1Character.image == player3Character.image {randomizeAllCharacter()}
+        if player1Character.image == player4Character.image {randomizeAllCharacter()}
+        if player2Character.image == player3Character.image {randomizeAllCharacter()}
+        if player2Character.image == player4Character.image {randomizeAllCharacter()}
+        if player3Character.image == player4Character.image {randomizeAllCharacter()}}
     
     func randomizeTeam1Characters() {
         if modeButton.currentTitle == "Basic Mode" || modeButton.currentTitle == "Opponents" || modeButton.currentTitle == "Worst character" {
