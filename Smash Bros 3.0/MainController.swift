@@ -38,6 +38,7 @@ class MainController: UIViewController {
     func roundEdges() {
         playerScoresLabel.layer.masksToBounds = true;
         playerScoresLabel.layer.cornerRadius = 7;
+        BasicModeLoadButton.layer.masksToBounds = true;
         BasicModeLoadButton.layer.cornerRadius = 7;
         ChooseOpponentsLoadButton.layer.cornerRadius = 7;
         SameCharLoadButton.layer.cornerRadius = 7;
