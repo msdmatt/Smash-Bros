@@ -48,8 +48,7 @@ class MainController: UIViewController {
             let destinationVC = segue.destination as! ModeViewController
             destinationVC.modeIntPassed = 3}}
     
-    override func viewDidLoad() {super.viewDidLoad();
-        roundEdges()}
+    override func viewDidLoad() {super.viewDidLoad();roundEdges()}
     
     func roundEdges() {
         playerScoresLabel.layer.masksToBounds = true;
