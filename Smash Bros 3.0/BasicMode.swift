@@ -255,7 +255,7 @@ class BasicMode: UIViewController {
         if randomStage == 5 {stageLabel.text = yoshiIslandLabel}}
 
     func sameCharacters () {
-        randomPlayer1CharImage = Int.random(in: 0...7)
+        randomPlayer1CharImage = Int.random(in: 0...11)
         player1Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])
         player2Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])
         player3Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])
@@ -268,8 +268,8 @@ class BasicMode: UIViewController {
         else if modeButton.currentTitle == "Opponents" {
             modeButton.setTitle("Same character", for: .normal)}
         else if modeButton.currentTitle == "Same character" {
-            modeButton.setTitle("Worst character", for: .normal)}
-        else {self.modeButton.setTitle("Basic Mode", for: .normal)}}
+            modeButton.setTitle("Basic Mode", for: .normal)}}
+//      else {self.modeButton.setTitle("Basic Mode", for: .normal)}}
     
     func disableScreen(){
         team1Button.isEnabled = false;
