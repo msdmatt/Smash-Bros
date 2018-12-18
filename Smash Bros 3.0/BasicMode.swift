@@ -81,7 +81,7 @@ class BasicMode: UIViewController {
     @IBAction func LetsPlayButton(_ sender: Any) {
         enableScreen();
         if modeButton.currentTitle == "Basic Mode" {randomizeTeams();randomizeCharacter();randomizeStage()}
-        else if modeButton.currentTitle == "Choose your opponents" {randomizeTeams();randomizeCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeCharacter();randomizeStage()}
         else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
         else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeCharacter();randomizeStage()}}
 
@@ -164,6 +164,9 @@ class BasicMode: UIViewController {
         stageImage.layer.masksToBounds = true;
         stageImage.layer.cornerRadius = 7;
         stageImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+        modeButton.layer.masksToBounds = true;
+        modeButton.layer.cornerRadius = 7;
+        modeButton.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner,.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
     
     func randomizeTeams(){
@@ -216,7 +219,7 @@ class BasicMode: UIViewController {
         if player3Character.image == player4Character.image {randomizeCharacter()}}
     
     func randomizeTeam1Characters() {
-        if modeButton.currentTitle == "Basic Mode" || modeButton.currentTitle == "Choose your opponents" || modeButton.currentTitle == "Worst character" {
+        if modeButton.currentTitle == "Basic Mode" || modeButton.currentTitle == "Opponents" || modeButton.currentTitle == "Worst character" {
         randomPlayer1CharImage = Int.random(in: 0...48)
         player1Character.image = UIImage(named: characterImageArray[randomPlayer1CharImage])
         randomPlayer2CharImage = Int.random(in: 0...48)
@@ -229,7 +232,7 @@ class BasicMode: UIViewController {
         else {sameCharacters()}}
     
     func randomizeTeam2Characters() {
-        if modeButton.currentTitle == "Basic Mode" || modeButton.currentTitle == "Choose your opponents" || modeButton.currentTitle == "Worst character" {
+        if modeButton.currentTitle == "Basic Mode" || modeButton.currentTitle == "Opponents" || modeButton.currentTitle == "Worst character" {
         randomPlayer3CharImage = Int.random(in: 0...48)
         player3Character.image = UIImage(named: characterImageArray[randomPlayer3CharImage])
         randomPlayer4CharImage = Int.random(in: 0...48)
@@ -261,8 +264,8 @@ class BasicMode: UIViewController {
     func changeMode() {
         unhideButtons();
         if modeButton.currentTitle == "Basic Mode" {
-            modeButton.setTitle("Choose your opponents", for: .normal)}
-        else if modeButton.currentTitle == "Choose your opponents" {
+            modeButton.setTitle("Opponents", for: .normal)}
+        else if modeButton.currentTitle == "Opponents" {
             modeButton.setTitle("Same character", for: .normal)}
         else if modeButton.currentTitle == "Same character" {
             modeButton.setTitle("Worst character", for: .normal)}
