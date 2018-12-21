@@ -16,14 +16,19 @@ class MainController: UIViewController {
     @IBOutlet weak var WorstCharLoadButton: UIButton!
     @IBOutlet weak var chrisLabel: UILabel!
     @IBOutlet weak var chrisScore: UILabel!
+    var chrisScoreInt:Int = 0
     @IBOutlet weak var richLabel: UILabel!
     @IBOutlet weak var richScore: UILabel!
+    var richScoreInt:Int = 0
     @IBOutlet weak var jeffLabel: UILabel!
     @IBOutlet weak var jeffScore: UILabel!
+    var jeffScoreInt:Int = 0
     @IBOutlet weak var mattLabel: UILabel!
     @IBOutlet weak var mattScore: UILabel!
+    var mattScoreInt:Int = 0
     @IBOutlet weak var katLabel: UILabel!
     @IBOutlet weak var katScore: UILabel!
+    var katScoreInt:Int = 0
     @IBOutlet weak var playerScoresLabel: UILabel!
     
     @IBAction func BasicModeLoadAction(_ sender: Any) {
@@ -79,7 +84,19 @@ class MainController: UIViewController {
         katLabel.layer.cornerRadius = 7;
         katScore.layer.cornerRadius = 7}
     
-    
+//    func updateScoresSituations() {
+//        if scoresUpdated == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
+//        if scoresUpdated == 13 {chrisScoreInt = chrisScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+//        if scoresUpdated == 14 {chrisScoreInt = chrisScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+//        if scoresUpdated == 21 {richScoreInt = richScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+//        if scoresUpdated == 23 {richScoreInt = richScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+//        if scoresUpdated == 24 {richScoreInt = richScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+//        if scoresUpdated == 31 {jeffScoreInt = jeffScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+//        if scoresUpdated == 32 {jeffScoreInt = jeffScoreInt + 1; richScoreInt = richScoreInt + 1}
+//        if scoresUpdated == 34 {jeffScoreInt = jeffScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+//        if scoresUpdated == 41 {mattScoreInt = mattScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+//        if scoresUpdated == 42 {mattScoreInt = mattScoreInt + 1; richScoreInt = richScoreInt + 1}
+//        if scoresUpdated == 43 {mattScoreInt = mattScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}}
     
 }
 
