@@ -32,14 +32,14 @@ class MainController: UIViewController {
     @IBOutlet weak var playerScoresLabel: UILabel!
     
     @IBAction func BasicModeLoadAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToModeScreen", sender: self)
-    }
+        performSegue(withIdentifier: "goToModeScreen", sender: self)}
+    
     @IBAction func ChooseOpponentsAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToModeScreen", sender: self)
-    }
+        performSegue(withIdentifier: "goToModeScreen", sender: self)}
+    
     @IBAction func SameCharAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToModeScreen", sender: self)
-    }
+        performSegue(withIdentifier: "goToModeScreen", sender: self)}
+    
     @IBAction func WorstCharAction(_ sender: Any) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
