@@ -10,3 +10,6 @@ import UIKit
 
 protocol UpdateScores {
     func winnersSelected(winners:Int)}
+
+protocol KatPlays {
+    func isKatPlaying(katIsPlaying:Bool)}

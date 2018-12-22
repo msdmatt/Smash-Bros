@@ -342,6 +342,15 @@
                                     <action selector="lockScores:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLV-1a-gcM"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yow-BR-KER">
+                                <rect key="frame" x="316" y="415" width="51" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tnv-YG-8Zg"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="katToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="6qg-6c-Me9"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -356,6 +365,8 @@
                             <constraint firstItem="7MS-bx-PJW" firstAttribute="leading" secondItem="x2z-2y-Vgd" secondAttribute="trailing" constant="10" id="Vag-jd-hRt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p1U-or-Cfb" secondAttribute="trailing" constant="10" id="Zqc-n4-aI7"/>
                             <constraint firstItem="e2I-Wj-z4R" firstAttribute="top" secondItem="5Js-Xe-p2B" secondAttribute="bottom" constant="20" id="aDU-Tc-9dp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yow-BR-KER" secondAttribute="trailing" constant="10" id="ayE-gv-dBG"/>
+                            <constraint firstItem="yow-BR-KER" firstAttribute="top" secondItem="BXN-ld-SRZ" secondAttribute="bottom" constant="10" id="gEv-ni-DJ2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Js-Xe-p2B" secondAttribute="trailing" constant="10" id="hgn-sX-V4T"/>
                             <constraint firstItem="7MS-bx-PJW" firstAttribute="top" secondItem="e2I-Wj-z4R" secondAttribute="bottom" constant="15" id="ju7-Zh-v3j"/>
                             <constraint firstItem="e2I-Wj-z4R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="oDk-OF-0hw"/>
@@ -376,6 +387,7 @@
                         <outlet property="jeffScore" destination="Ofr-zd-iLt" id="ROD-yk-IPA"/>
                         <outlet property="katLabel" destination="vSb-aB-Zs0" id="Rse-sj-z7t"/>
                         <outlet property="katScore" destination="MZZ-Lu-Db4" id="l4N-dq-uKS"/>
+                        <outlet property="katToggle" destination="yow-BR-KER" id="ILj-Ok-4Cp"/>
                         <outlet property="lockScoresButton" destination="7MS-bx-PJW" id="ljU-XL-rhc"/>
                         <outlet property="mattLabel" destination="dif-JZ-pQY" id="wG2-7f-aJ3"/>
                         <outlet property="mattScore" destination="qcs-FO-kAF" id="VYW-dZ-N3R"/>

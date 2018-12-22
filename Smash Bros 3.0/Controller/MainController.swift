@@ -38,6 +38,7 @@ class MainController: UIViewController, UpdateScores {
     @IBOutlet weak var adjustScoresButton: UIButton!
     @IBOutlet weak var lockScoresButton: UIButton!
     @IBOutlet weak var resetScoresButton: UIButton!
+    @IBOutlet weak var katToggle: UISwitch!
     
     var cornerRadius:CGFloat = 7.00
     var chrisScoreInt:Int = 0
@@ -105,7 +106,10 @@ class MainController: UIViewController, UpdateScores {
         if player1ScoreIncLabel.isEnabled == true {
             resetScores();lockScores()}}
     
-//MARK Functions
+    @IBAction func katToggle(_ sender: Any) {
+    }
+    
+    //MARK Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToModeScreen" {
             let destinationVC = segue.destination as! ModeViewController
