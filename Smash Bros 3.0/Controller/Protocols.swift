@@ -9,14 +9,4 @@
 import UIKit
 
 protocol UpdateScores {
-    func winnersSelected(winners:Int)
-}
-
-class Protocols: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
-}
+    func winnersSelected(winners:Int)}
