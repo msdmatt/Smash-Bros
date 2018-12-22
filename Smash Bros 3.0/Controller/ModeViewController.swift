@@ -35,6 +35,8 @@ class ModeViewController: UIViewController {
     @IBOutlet weak var team1View: UIView!
     @IBOutlet weak var team2View: UIView!
     
+    var delegate : UpdateScores?
+    
 
 // Constants and Variables
     let characterImageArray = ["DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","Star"]
@@ -76,7 +78,10 @@ class ModeViewController: UIViewController {
     
     @IBAction func Team1Button(_ sender: Any) {randomizeTeam1Characters()}
     
-    @IBAction func Team1WinButton(_ sender: Any) {}
+    @IBAction func Team1WinButton(_ sender: Any) {
+        let matchWinners = 42
+        delegate?.winnersSelected(winners: matchWinners)
+        self.dismiss(animated: true, completion: nil)}
     
     @IBAction func StageButton(_ sender: Any) {randomizeStage()}
     

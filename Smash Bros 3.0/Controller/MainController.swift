@@ -8,28 +8,36 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: UIViewController, UpdateScores {
     
+
     @IBOutlet weak var BasicModeLoadButton: UIButton!
     @IBOutlet weak var ChooseOpponentsLoadButton: UIButton!
     @IBOutlet weak var SameCharLoadButton: UIButton!
     @IBOutlet weak var WorstCharLoadButton: UIButton!
     @IBOutlet weak var chrisLabel: UILabel!
     @IBOutlet weak var chrisScore: UILabel!
-    var chrisScoreInt:Int = 0
     @IBOutlet weak var richLabel: UILabel!
     @IBOutlet weak var richScore: UILabel!
-    var richScoreInt:Int = 0
     @IBOutlet weak var jeffLabel: UILabel!
     @IBOutlet weak var jeffScore: UILabel!
-    var jeffScoreInt:Int = 0
     @IBOutlet weak var mattLabel: UILabel!
     @IBOutlet weak var mattScore: UILabel!
-    var mattScoreInt:Int = 0
     @IBOutlet weak var katLabel: UILabel!
     @IBOutlet weak var katScore: UILabel!
-    var katScoreInt:Int = 0
     @IBOutlet weak var playerScoresLabel: UILabel!
+    
+    var chrisScoreInt:Int = 0
+    var richScoreInt:Int = 0
+    var jeffScoreInt:Int = 0
+    var mattScoreInt:Int = 0
+    var katScoreInt:Int = 0
+    var winnersInt:Int = 0
+    
+    func winnersSelected(winners: Int) {
+        winnersInt = winners
+        updateScoresSituations()
+    }
     
     @IBAction func BasicModeLoadAction(_ sender: Any) {
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
@@ -43,6 +51,9 @@ class MainController: UIViewController {
     @IBAction func WorstCharAction(_ sender: Any) {}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToModeScreen" {
+            let destinationVC = segue.destination as! ModeViewController
+            destinationVC.delegate = self}
         if segue.identifier == "goToModeScreen" && BasicModeLoadButton.isTouchInside == true {
             let destinationVC = segue.destination as! ModeViewController
             destinationVC.modeIntPassed = 1}
@@ -53,7 +64,7 @@ class MainController: UIViewController {
             let destinationVC = segue.destination as! ModeViewController
             destinationVC.modeIntPassed = 3}}
     
-    override func viewDidLoad() {super.viewDidLoad();roundEdges()}
+    override func viewDidLoad() {super.viewDidLoad();roundEdges(); updateScoresSituations()}
     
     func roundEdges() {
         playerScoresLabel.layer.masksToBounds = true;
@@ -84,19 +95,23 @@ class MainController: UIViewController {
         katLabel.layer.cornerRadius = 7;
         katScore.layer.cornerRadius = 7}
     
-//    func updateScoresSituations() {
-//        if scoresUpdated == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
-//        if scoresUpdated == 13 {chrisScoreInt = chrisScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
-//        if scoresUpdated == 14 {chrisScoreInt = chrisScoreInt + 1; mattScoreInt = mattScoreInt + 1}
-//        if scoresUpdated == 21 {richScoreInt = richScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
-//        if scoresUpdated == 23 {richScoreInt = richScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
-//        if scoresUpdated == 24 {richScoreInt = richScoreInt + 1; mattScoreInt = mattScoreInt + 1}
-//        if scoresUpdated == 31 {jeffScoreInt = jeffScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
-//        if scoresUpdated == 32 {jeffScoreInt = jeffScoreInt + 1; richScoreInt = richScoreInt + 1}
-//        if scoresUpdated == 34 {jeffScoreInt = jeffScoreInt + 1; mattScoreInt = mattScoreInt + 1}
-//        if scoresUpdated == 41 {mattScoreInt = mattScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
-//        if scoresUpdated == 42 {mattScoreInt = mattScoreInt + 1; richScoreInt = richScoreInt + 1}
-//        if scoresUpdated == 43 {mattScoreInt = mattScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}}
+    func updateScoresSituations() {
+        if winnersInt == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
+        if winnersInt == 13 {chrisScoreInt = chrisScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+        if winnersInt == 14 {chrisScoreInt = chrisScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+        if winnersInt == 21 {richScoreInt = richScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+        if winnersInt == 23 {richScoreInt = richScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+        if winnersInt == 24 {richScoreInt = richScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+        if winnersInt == 31 {jeffScoreInt = jeffScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+        if winnersInt == 32 {jeffScoreInt = jeffScoreInt + 1; richScoreInt = richScoreInt + 1}
+        if winnersInt == 34 {jeffScoreInt = jeffScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+        if winnersInt == 41 {mattScoreInt = mattScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+        if winnersInt == 42 {mattScoreInt = mattScoreInt + 1; richScoreInt = richScoreInt + 1}
+        if winnersInt == 43 {mattScoreInt = mattScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+        chrisScore.text = String(chrisScoreInt)
+        richScore.text = String(richScoreInt)
+        jeffScore.text = String(jeffScoreInt)
+        mattScore.text = String(mattScoreInt)}
     
 }
 
