@@ -31,7 +31,7 @@
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-or-Cfb" userLabel="ModesStack">
-                                <rect key="frame" x="10" y="393" width="355" height="264"/>
+                                <rect key="frame" x="10" y="461" width="355" height="196"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-kl-Ay6" customClass="basicModeButton">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
@@ -70,19 +70,6 @@
                                         </state>
                                         <connections>
                                             <action selector="SameCharAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUt-wu-vrf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJH-ov-tPx">
-                                        <rect key="frame" x="0.0" y="204" width="355" height="60"/>
-                                        <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                        <size key="titleShadowOffset" width="1" height="1"/>
-                                        <state key="normal" title="Worst character">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="WorstCharAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vdk-Fv-KCR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -169,7 +156,7 @@
                                                     <action selector="player1ScoreInc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSk-Y7-TMp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-bs-RnS">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bb7-bs-RnS">
                                                 <rect key="frame" x="0.0" y="39" width="30" height="24"/>
                                                 <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -180,7 +167,7 @@
                                                     <action selector="player2ScoreInc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAS-ne-S7q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc2-C3-V3h">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc2-C3-V3h">
                                                 <rect key="frame" x="0.0" y="78" width="30" height="24"/>
                                                 <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -191,7 +178,7 @@
                                                     <action selector="player3ScoreInc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rY-dv-71d"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-xV-19T">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-xV-19T">
                                                 <rect key="frame" x="0.0" y="117" width="30" height="24"/>
                                                 <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -202,7 +189,7 @@
                                                     <action selector="player4ScoreInc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcu-lt-KdX"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYJ-oE-qgp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYJ-oE-qgp">
                                                 <rect key="frame" x="0.0" y="156" width="30" height="24"/>
                                                 <color key="backgroundColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -328,7 +315,6 @@
                         <outlet property="BasicModeLoadButton" destination="TMM-kl-Ay6" id="umR-6Z-8jO"/>
                         <outlet property="ChooseOpponentsLoadButton" destination="pMI-5k-Agb" id="syv-ZP-ZdY"/>
                         <outlet property="SameCharLoadButton" destination="RWm-Nt-EAO" id="AAh-d4-Mt7"/>
-                        <outlet property="WorstCharLoadButton" destination="TJH-ov-tPx" id="8ng-cw-X9c"/>
                         <outlet property="chrisLabel" destination="CVO-3u-gQC" id="RIm-0R-RBa"/>
                         <outlet property="chrisScore" destination="d48-8w-MAl" id="YvM-xB-vJz"/>
                         <outlet property="jeffLabel" destination="sMU-uf-VFU" id="fH6-7D-Y4o"/>
