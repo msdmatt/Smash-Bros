@@ -54,12 +54,15 @@ class MainController: UIViewController, UpdateScores {
     }
     
     @IBAction func BasicModeLoadAction(_ sender: Any) {
+        lockScores()
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
     
     @IBAction func ChooseOpponentsAction(_ sender: Any) {
+        lockScores()
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
     
     @IBAction func SameCharAction(_ sender: Any) {
+        lockScores()
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
         
     @IBAction func player1ScoreInc(_ sender: Any) {
@@ -99,7 +102,8 @@ class MainController: UIViewController, UpdateScores {
         lockScores()}
     
     @IBAction func resetScores(_ sender: Any) {
-        resetScores();lockScores()}
+        if player1ScoreIncLabel.isEnabled == true {
+            resetScores();lockScores()}}
     
 //MARK Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -66,6 +66,7 @@ class ModeViewController: UIViewController {
     
     var modeIntPassed:Int?
     var matchWinnersInt:Int?
+    var katPlays:Int?
     
     
 // Actions go here
@@ -359,11 +360,11 @@ class ModeViewController: UIViewController {
         modeButton.layer.cornerRadius = 7}
     
     func randomizeTeams(){
-        randomPlayer1Index = Int.random(in: 0...4)
-        randomPlayer2Index = Int.random(in: 0...4)
-        randomPlayer3Index = Int.random(in: 0...4)
-        randomPlayer4Index = Int.random(in: 0...4)
-        randomPlayer1Index = Int.random(in: 0...4);
+        randomPlayer1Index = Int.random(in: 0...3)
+        randomPlayer2Index = Int.random(in: 0...3)
+        randomPlayer3Index = Int.random(in: 0...3)
+        randomPlayer4Index = Int.random(in: 0...3)
+        randomPlayer1Index = Int.random(in: 0...3);
         if randomPlayer1Index == 0 {player1Label.text = chrisLabel}
         if randomPlayer1Index == 1 {player1Label.text = richLabel}
         if randomPlayer1Index == 2 {player1Label.text = jeffLabel}
