@@ -14,7 +14,6 @@ class MainController: UIViewController, UpdateScores {
     @IBOutlet weak var BasicModeLoadButton: UIButton!
     @IBOutlet weak var ChooseOpponentsLoadButton: UIButton!
     @IBOutlet weak var SameCharLoadButton: UIButton!
-    @IBOutlet weak var WorstCharLoadButton: UIButton!
     @IBOutlet weak var chrisLabel: UILabel!
     @IBOutlet weak var chrisScore: UILabel!
     @IBOutlet weak var richLabel: UILabel!
@@ -57,9 +56,7 @@ class MainController: UIViewController, UpdateScores {
     
     @IBAction func SameCharAction(_ sender: Any) {
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
-    
-    @IBAction func WorstCharAction(_ sender: Any) {}
-    
+        
     @IBAction func player1ScoreInc(_ sender: Any) {
         scoreChangeButtonPressed()}
     
@@ -126,7 +123,6 @@ class MainController: UIViewController, UpdateScores {
         BasicModeLoadButton.layer.cornerRadius = 7;
         ChooseOpponentsLoadButton.layer.cornerRadius = 7;
         SameCharLoadButton.layer.cornerRadius = 7;
-        WorstCharLoadButton.layer.cornerRadius = 7;
         chrisLabel.layer.masksToBounds = true;
         chrisScore.layer.masksToBounds = true;
         richLabel.layer.masksToBounds = true;
