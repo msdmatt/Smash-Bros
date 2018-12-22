@@ -26,6 +26,16 @@ class MainController: UIViewController, UpdateScores {
     @IBOutlet weak var katLabel: UILabel!
     @IBOutlet weak var katScore: UILabel!
     @IBOutlet weak var playerScoresLabel: UILabel!
+    @IBOutlet weak var player1ScoreIncLabel: UIButton!
+    @IBOutlet weak var player2ScoreIncLabel: UIButton!
+    @IBOutlet weak var player3ScoreIncLabel: UIButton!
+    @IBOutlet weak var player4ScoreIncLabel: UIButton!
+    @IBOutlet weak var player5ScoreIncLabel: UIButton!
+    @IBOutlet weak var player1ScoreDecLabel: UIButton!
+    @IBOutlet weak var player2ScoreDecLabel: UIButton!
+    @IBOutlet weak var player3ScoreDecLabel: UIButton!
+    @IBOutlet weak var player4ScoreDecLabel: UIButton!
+    @IBOutlet weak var player5ScoreDecLabel: UIButton!
     
     var chrisScoreInt:Int = 0
     var richScoreInt:Int = 0
@@ -49,6 +59,49 @@ class MainController: UIViewController, UpdateScores {
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
     
     @IBAction func WorstCharAction(_ sender: Any) {}
+    
+    @IBAction func player1ScoreInc(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player2ScoreInc(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player3ScoreInc(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player4ScoreInc(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player5ScoreInc(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player1ScoreDec(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player2ScoreDec(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player3ScoreDec(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player4ScoreDec(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    @IBAction func player5ScoreDec(_ sender: Any) {
+        scoreChangeButtonPressed()}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToModeScreen" {
@@ -84,6 +137,16 @@ class MainController: UIViewController, UpdateScores {
         mattScore.layer.masksToBounds = true;
         katLabel.layer.masksToBounds = true;
         katScore.layer.masksToBounds = true;
+        player1ScoreIncLabel.layer.masksToBounds = true;
+        player2ScoreIncLabel.layer.masksToBounds = true;
+        player3ScoreIncLabel.layer.masksToBounds = true;
+        player4ScoreIncLabel.layer.masksToBounds = true;
+        player5ScoreIncLabel.layer.masksToBounds = true;
+        player1ScoreDecLabel.layer.masksToBounds = true;
+        player2ScoreDecLabel.layer.masksToBounds = true;
+        player3ScoreDecLabel.layer.masksToBounds = true;
+        player4ScoreDecLabel.layer.masksToBounds = true;
+        player5ScoreDecLabel.layer.masksToBounds = true;
         chrisLabel.layer.cornerRadius = 7;
         chrisScore.layer.cornerRadius = 7;
         richLabel.layer.cornerRadius = 7;
@@ -93,7 +156,17 @@ class MainController: UIViewController, UpdateScores {
         mattLabel.layer.cornerRadius = 7;
         mattScore.layer.cornerRadius = 7;
         katLabel.layer.cornerRadius = 7;
-        katScore.layer.cornerRadius = 7}
+        katScore.layer.cornerRadius = 7;
+        player1ScoreIncLabel.layer.cornerRadius = 7;
+        player2ScoreIncLabel.layer.cornerRadius = 7;
+        player3ScoreIncLabel.layer.cornerRadius = 7;
+        player4ScoreIncLabel.layer.cornerRadius = 7;
+        player5ScoreIncLabel.layer.cornerRadius = 7;
+        player1ScoreDecLabel.layer.cornerRadius = 7;
+        player2ScoreDecLabel.layer.cornerRadius = 7;
+        player3ScoreDecLabel.layer.cornerRadius = 7;
+        player4ScoreDecLabel.layer.cornerRadius = 7
+        player5ScoreDecLabel.layer.cornerRadius = 7}
     
     func updateScoresSituations() {
         if winnersInt == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
@@ -112,6 +185,31 @@ class MainController: UIViewController, UpdateScores {
         richScore.text = String(richScoreInt)
         jeffScore.text = String(jeffScoreInt)
         mattScore.text = String(mattScoreInt)}
+ 
+    func scoreChangeButtonPressed(){
+        if player1ScoreIncLabel.isTouchInside == true {
+            chrisScoreInt = chrisScoreInt + 1}
+        if player2ScoreIncLabel.isTouchInside == true {
+            richScoreInt = richScoreInt + 1}
+        if player3ScoreIncLabel.isTouchInside == true {
+            jeffScoreInt = jeffScoreInt + 1}
+        if player4ScoreIncLabel.isTouchInside == true {
+            mattScoreInt = mattScoreInt + 1}
+        if player1ScoreDecLabel.isTouchInside == true {
+            chrisScoreInt = chrisScoreInt - 1}
+        if player2ScoreDecLabel.isTouchInside == true {
+            richScoreInt = richScoreInt - 1}
+        if player3ScoreDecLabel.isTouchInside == true {
+            jeffScoreInt = jeffScoreInt - 1}
+        if player4ScoreDecLabel.isTouchInside == true {
+            mattScoreInt = mattScoreInt - 1}
+        chrisScore.text = String(chrisScoreInt)
+        richScore.text = String(richScoreInt)
+        jeffScore.text = String(jeffScoreInt)
+        mattScore.text = String(mattScoreInt)}
+
+        
+    }
     
-}
+
 
