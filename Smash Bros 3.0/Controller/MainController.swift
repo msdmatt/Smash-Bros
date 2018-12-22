@@ -99,7 +99,7 @@ class MainController: UIViewController, UpdateScores {
         lockScores()}
     
     @IBAction func resetScores(_ sender: Any) {
-        resetScores()}
+        resetScores();lockScores()}
     
 //MARK Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -176,19 +176,28 @@ class MainController: UIViewController, UpdateScores {
         if winnersInt == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
         if winnersInt == 13 {chrisScoreInt = chrisScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
         if winnersInt == 14 {chrisScoreInt = chrisScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+        if winnersInt == 15 {chrisScoreInt = chrisScoreInt + 1; katScoreInt = katScoreInt + 1}
         if winnersInt == 21 {richScoreInt = richScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
         if winnersInt == 23 {richScoreInt = richScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
         if winnersInt == 24 {richScoreInt = richScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+        if winnersInt == 25 {richScoreInt = richScoreInt + 1; katScoreInt = katScoreInt + 1}
         if winnersInt == 31 {jeffScoreInt = jeffScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
         if winnersInt == 32 {jeffScoreInt = jeffScoreInt + 1; richScoreInt = richScoreInt + 1}
         if winnersInt == 34 {jeffScoreInt = jeffScoreInt + 1; mattScoreInt = mattScoreInt + 1}
+        if winnersInt == 35 {jeffScoreInt = jeffScoreInt + 1; katScoreInt = katScoreInt + 1}
         if winnersInt == 41 {mattScoreInt = mattScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
         if winnersInt == 42 {mattScoreInt = mattScoreInt + 1; richScoreInt = richScoreInt + 1}
         if winnersInt == 43 {mattScoreInt = mattScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+        if winnersInt == 45 {mattScoreInt = mattScoreInt + 1; katScoreInt = katScoreInt + 1}
+        if winnersInt == 51 {katScoreInt = katScoreInt + 1; chrisScoreInt = chrisScoreInt + 1}
+        if winnersInt == 52 {katScoreInt = katScoreInt + 1; richScoreInt = richScoreInt + 1}
+        if winnersInt == 53 {katScoreInt = katScoreInt + 1; jeffScoreInt = jeffScoreInt + 1}
+        if winnersInt == 54 {katScoreInt = katScoreInt + 1; mattScoreInt = mattScoreInt + 1}
         chrisScore.text = String(chrisScoreInt)
         richScore.text = String(richScoreInt)
         jeffScore.text = String(jeffScoreInt)
-        mattScore.text = String(mattScoreInt)}
+        mattScore.text = String(mattScoreInt)
+        katScore.text = String(katScoreInt)}
  
     func scoreChangeButtonPressed(){
         if player1ScoreIncLabel.isTouchInside == true {
@@ -199,6 +208,8 @@ class MainController: UIViewController, UpdateScores {
             jeffScoreInt = jeffScoreInt + 1}
         if player4ScoreIncLabel.isTouchInside == true {
             mattScoreInt = mattScoreInt + 1}
+        if player5ScoreIncLabel.isTouchInside == true {
+            katScoreInt = katScoreInt + 1}
         if player1ScoreDecLabel.isTouchInside == true {
             chrisScoreInt = chrisScoreInt - 1}
         if player2ScoreDecLabel.isTouchInside == true {
@@ -207,20 +218,25 @@ class MainController: UIViewController, UpdateScores {
             jeffScoreInt = jeffScoreInt - 1}
         if player4ScoreDecLabel.isTouchInside == true {
             mattScoreInt = mattScoreInt - 1}
+        if player5ScoreDecLabel.isTouchInside == true {
+            katScoreInt = katScoreInt - 1}
         chrisScore.text = String(chrisScoreInt)
         richScore.text = String(richScoreInt)
         jeffScore.text = String(jeffScoreInt)
-        mattScore.text = String(mattScoreInt)}
+        mattScore.text = String(mattScoreInt)
+        katScore.text = String(katScoreInt)}
 
     func resetScores(){
         chrisScoreInt = 0
         jeffScoreInt = 0
         richScoreInt = 0
         mattScoreInt = 0
+        katScoreInt = 0
         chrisScore.text = String(chrisScoreInt)
         richScore.text = String(richScoreInt)
         jeffScore.text = String(jeffScoreInt)
-        mattScore.text = String(mattScoreInt)}
+        mattScore.text = String(mattScoreInt)
+        katScore.text = String(katScoreInt)}
         
     func lockScores(){
         player1ScoreIncLabel.isEnabled = false;

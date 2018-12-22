@@ -121,48 +121,81 @@ class ModeViewController: UIViewController {
             matchWinnersInt = 13}
         if player1Label.text == "Chris" && player2Label.text == "Matt" {
             matchWinnersInt = 14}
+        if player1Label.text == "Chris" && player2Label.text == "Kat" {
+            matchWinnersInt = 15}
         if player1Label.text == "Rich" && player2Label.text == "Chris" {
             matchWinnersInt = 21}
         if player1Label.text == "Rich" && player2Label.text == "Jeff" {
             matchWinnersInt = 23}
         if player1Label.text == "Rich" && player2Label.text == "Matt" {
             matchWinnersInt = 24}
+        if player1Label.text == "Rich" && player2Label.text == "Kat" {
+            matchWinnersInt = 25}
         if player1Label.text == "Jeff" && player2Label.text == "Chris" {
             matchWinnersInt = 31}
         if player1Label.text == "Jeff" && player2Label.text == "Rich" {
             matchWinnersInt = 32}
         if player1Label.text == "Jeff" && player2Label.text == "Matt" {
             matchWinnersInt = 34}
+        if player1Label.text == "Jeff" && player2Label.text == "Kat" {
+            matchWinnersInt = 35}
         if player1Label.text == "Matt" && player2Label.text == "Chris" {
             matchWinnersInt = 41}
         if player1Label.text == "Matt" && player2Label.text == "Rich" {
             matchWinnersInt = 42}
         if player1Label.text == "Matt" && player2Label.text == "Jeff" {
             matchWinnersInt = 43}
+        if player1Label.text == "Matt" && player2Label.text == "Kat" {
+            matchWinnersInt = 45}
+        if player1Label.text == "Kat" && player2Label.text == "Chris" {
+            matchWinnersInt = 51}
+        if player1Label.text == "Kat" && player2Label.text == "Rich" {
+            matchWinnersInt = 52}
+        if player1Label.text == "Kat" && player2Label.text == "Jeff" {
+            matchWinnersInt = 53}
+        if player1Label.text == "Kat" && player2Label.text == "Matt" {
+            matchWinnersInt = 54}
         if player2Label.text == "Chris" && player1Label.text == "Rich" {
             matchWinnersInt = 12}
         if player2Label.text == "Chris" && player1Label.text == "Jeff" {
             matchWinnersInt = 13}
         if player2Label.text == "Chris" && player1Label.text == "Matt" {
             matchWinnersInt = 14}
+        if player2Label.text == "Chris" && player1Label.text == "Kat" {
+            matchWinnersInt = 15}
         if player2Label.text == "Rich" && player1Label.text == "Chris" {
             matchWinnersInt = 21}
         if player2Label.text == "Rich" && player1Label.text == "Jeff" {
             matchWinnersInt = 23}
         if player2Label.text == "Rich" && player1Label.text == "Matt" {
             matchWinnersInt = 24}
+        if player2Label.text == "Rich" && player1Label.text == "Kat" {
+            matchWinnersInt = 25}
         if player2Label.text == "Jeff" && player1Label.text == "Chris" {
             matchWinnersInt = 31}
         if player2Label.text == "Jeff" && player1Label.text == "Rich" {
             matchWinnersInt = 32}
         if player2Label.text == "Jeff" && player1Label.text == "Matt" {
             matchWinnersInt = 34}
+        if player2Label.text == "Jeff" && player1Label.text == "Kat" {
+            matchWinnersInt = 35}
         if player2Label.text == "Matt" && player1Label.text == "Chris" {
             matchWinnersInt = 41}
         if player2Label.text == "Matt" && player1Label.text == "Rich" {
             matchWinnersInt = 42}
         if player2Label.text == "Matt" && player1Label.text == "Jeff" {
-            matchWinnersInt = 43}}
+            matchWinnersInt = 43}
+        if player2Label.text == "Matt" && player1Label.text == "Kat" {
+            matchWinnersInt = 45}
+        if player2Label.text == "Kat" && player1Label.text == "Chris" {
+            matchWinnersInt = 51}
+        if player2Label.text == "Kat" && player1Label.text == "Rich" {
+            matchWinnersInt = 52}
+        if player2Label.text == "Kat" && player1Label.text == "Jeff" {
+            matchWinnersInt = 53}
+        if player2Label.text == "Kat" && player1Label.text == "Matt" {
+            matchWinnersInt = 54}}
+    
         func matchWinners2(){
         if player3Label.text == "Chris" && player4Label.text == "Rich" {
             matchWinnersInt = 12}
@@ -170,48 +203,82 @@ class ModeViewController: UIViewController {
             matchWinnersInt = 13}
         if player3Label.text == "Chris" && player4Label.text == "Matt" {
             matchWinnersInt = 14}
+        if player3Label.text == "Chris" && player4Label.text == "Kat" {
+            matchWinnersInt = 15}
         if player3Label.text == "Rich" && player4Label.text == "Chris" {
             matchWinnersInt = 21}
         if player3Label.text == "Rich" && player4Label.text == "Jeff" {
             matchWinnersInt = 23}
         if player3Label.text == "Rich" && player4Label.text == "Matt" {
             matchWinnersInt = 24}
+        if player3Label.text == "Rich" && player4Label.text == "Kat" {
+            matchWinnersInt = 25}
         if player3Label.text == "Jeff" && player4Label.text == "Chris" {
             matchWinnersInt = 31}
         if player3Label.text == "Jeff" && player4Label.text == "Rich" {
             matchWinnersInt = 32}
         if player3Label.text == "Jeff" && player4Label.text == "Matt" {
             matchWinnersInt = 34}
+        if player3Label.text == "Jeff" && player4Label.text == "Kat" {
+            matchWinnersInt = 35}
         if player3Label.text == "Matt" && player4Label.text == "Chris" {
             matchWinnersInt = 41}
         if player3Label.text == "Matt" && player4Label.text == "Rich" {
             matchWinnersInt = 42}
         if player3Label.text == "Matt" && player4Label.text == "Jeff" {
             matchWinnersInt = 43}
+        if player3Label.text == "Matt" && player4Label.text == "Kat" {
+            matchWinnersInt = 45}
+        if player3Label.text == "Kat" && player4Label.text == "Chris" {
+            matchWinnersInt = 51}
+        if player3Label.text == "Kat" && player4Label.text == "Rich" {
+            matchWinnersInt = 52}
+        if player3Label.text == "Kat" && player4Label.text == "Jeff" {
+            matchWinnersInt = 53}
+        if player3Label.text == "Kat" && player4Label.text == "Matt" {
+            matchWinnersInt = 54}
         if player4Label.text == "Chris" && player3Label.text == "Rich" {
             matchWinnersInt = 12}
         if player4Label.text == "Chris" && player3Label.text == "Jeff" {
             matchWinnersInt = 13}
         if player4Label.text == "Chris" && player3Label.text == "Matt" {
             matchWinnersInt = 14}
+        if player4Label.text == "Chris" && player3Label.text == "Kat" {
+            matchWinnersInt = 15}
         if player4Label.text == "Rich" && player3Label.text == "Chris" {
             matchWinnersInt = 21}
         if player4Label.text == "Rich" && player3Label.text == "Jeff" {
             matchWinnersInt = 23}
         if player4Label.text == "Rich" && player3Label.text == "Matt" {
             matchWinnersInt = 24}
+        if player4Label.text == "Rich" && player3Label.text == "Kat" {
+            matchWinnersInt = 25}
         if player4Label.text == "Jeff" && player3Label.text == "Chris" {
             matchWinnersInt = 31}
         if player4Label.text == "Jeff" && player3Label.text == "Rich" {
             matchWinnersInt = 32}
         if player4Label.text == "Jeff" && player3Label.text == "Matt" {
             matchWinnersInt = 34}
+        if player4Label.text == "Jeff" && player3Label.text == "Kat" {
+            matchWinnersInt = 35}
         if player4Label.text == "Matt" && player3Label.text == "Chris" {
             matchWinnersInt = 41}
         if player4Label.text == "Matt" && player3Label.text == "Rich" {
             matchWinnersInt = 42}
         if player4Label.text == "Matt" && player3Label.text == "Jeff" {
-            matchWinnersInt = 43}}
+            matchWinnersInt = 43}
+        if player4Label.text == "Matt" && player3Label.text == "Kat" {
+            matchWinnersInt = 45}
+        if player4Label.text == "Kat" && player3Label.text == "Chris" {
+            matchWinnersInt = 51}
+        if player4Label.text == "Kat" && player3Label.text == "Rich" {
+            matchWinnersInt = 52}
+        if player4Label.text == "Kat" && player3Label.text == "Jeff" {
+            matchWinnersInt = 53}
+        if player4Label.text == "Kat" && player3Label.text == "Matt" {
+            matchWinnersInt = 54}
+
+    }
     
     
     func hideButtons() {
@@ -292,16 +359,16 @@ class ModeViewController: UIViewController {
         modeButton.layer.cornerRadius = 7}
     
     func randomizeTeams(){
-        randomPlayer1Index = Int.random(in: 0...3)
-        randomPlayer2Index = Int.random(in: 0...3)
-        randomPlayer3Index = Int.random(in: 0...3)
-        randomPlayer4Index = Int.random(in: 0...3)
-        randomPlayer1Index = Int.random(in: 0...3);
+        randomPlayer1Index = Int.random(in: 0...4)
+        randomPlayer2Index = Int.random(in: 0...4)
+        randomPlayer3Index = Int.random(in: 0...4)
+        randomPlayer4Index = Int.random(in: 0...4)
+        randomPlayer1Index = Int.random(in: 0...4);
         if randomPlayer1Index == 0 {player1Label.text = chrisLabel}
         if randomPlayer1Index == 1 {player1Label.text = richLabel}
         if randomPlayer1Index == 2 {player1Label.text = jeffLabel}
         if randomPlayer1Index == 3 {player1Label.text = mattLabel}
-        if randomPlayer2Index == 4 {player1Label.text = katLabel}
+        if randomPlayer1Index == 4 {player1Label.text = katLabel}
         if randomPlayer2Index == 0 {player2Label.text = chrisLabel}
         if randomPlayer2Index == 1 {player2Label.text = richLabel}
         if randomPlayer2Index == 2 {player2Label.text = jeffLabel}

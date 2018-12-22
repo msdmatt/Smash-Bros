@@ -293,10 +293,10 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXN-ld-SRZ">
-                                <rect key="frame" x="225" y="360" width="140" height="40"/>
+                                <rect key="frame" x="230" y="360" width="135" height="40"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="1gg-h0-Q8U"/>
+                                    <constraint firstAttribute="width" constant="135" id="1gg-h0-Q8U"/>
                                     <constraint firstAttribute="height" constant="40" id="367-jE-d4a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
@@ -310,15 +310,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2z-2y-Vgd">
-                                <rect key="frame" x="10" y="360" width="140" height="40"/>
+                                <rect key="frame" x="10" y="360" width="100" height="40"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="0wO-kS-QbW"/>
+                                    <constraint firstAttribute="width" secondItem="x2z-2y-Vgd" secondAttribute="height" multiplier="5:2" id="fH3-yN-XXV"/>
                                     <constraint firstAttribute="height" constant="40" id="g0l-qf-z1i"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Adjust Scores">
+                                <state key="normal" title="Unlock">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -327,10 +327,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MS-bx-PJW">
-                                <rect key="frame" x="160" y="360" width="55" height="40"/>
+                                <rect key="frame" x="120" y="360" width="100" height="40"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="WEd-ON-mRJ"/>
+                                    <constraint firstAttribute="width" secondItem="7MS-bx-PJW" secondAttribute="height" multiplier="5:2" id="jfV-jH-QMd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
