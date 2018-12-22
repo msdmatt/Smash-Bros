@@ -70,10 +70,17 @@ class ModeViewController: UIViewController {
     
 // Actions go here
     override func viewDidLoad() {super.viewDidLoad()
-        adjustLabelsButtonsBorders();disableScreen()
+        adjustLabelsButtonsBorders()
+        disableScreen()
         if modeIntPassed == 1 {modeButton.setTitle("Basic Mode", for: UIControl.State.normal)}
         else if modeIntPassed == 2 {modeButton.setTitle("Opponents", for: UIControl.State.normal)}
-        else if modeIntPassed == 3 {modeButton.setTitle("Same character", for: UIControl.State.normal)}}
+        else if modeIntPassed == 3 {modeButton.setTitle("Same character", for: UIControl.State.normal)}
+        enableScreen()
+        if modeButton.currentTitle == "Basic Mode" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
+        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+    }
     
     @IBAction func ModeButton(_ sender: Any) {changeMode();disableScreen()}
     
@@ -99,7 +106,8 @@ class ModeViewController: UIViewController {
         if modeButton.currentTitle == "Basic Mode" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
         else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
         else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
-        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}}
+        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        }
 
     
     

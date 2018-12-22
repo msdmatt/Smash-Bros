@@ -35,7 +35,11 @@ class MainController: UIViewController, UpdateScores {
     @IBOutlet weak var player3ScoreDecLabel: UIButton!
     @IBOutlet weak var player4ScoreDecLabel: UIButton!
     @IBOutlet weak var player5ScoreDecLabel: UIButton!
+    @IBOutlet weak var adjustScoresButton: UIButton!
+    @IBOutlet weak var lockScoresButton: UIButton!
+    @IBOutlet weak var resetScoresButton: UIButton!
     
+    var cornerRadius:CGFloat = 7.00
     var chrisScoreInt:Int = 0
     var richScoreInt:Int = 0
     var jeffScoreInt:Int = 0
@@ -46,6 +50,7 @@ class MainController: UIViewController, UpdateScores {
     func winnersSelected(winners: Int) {
         winnersInt = winners
         updateScoresSituations()
+        lockScores()
     }
     
     @IBAction func BasicModeLoadAction(_ sender: Any) {
@@ -87,19 +92,16 @@ class MainController: UIViewController, UpdateScores {
     @IBAction func player5ScoreDec(_ sender: Any) {
         scoreChangeButtonPressed()}
     
+    @IBAction func adjustScores(_ sender: Any) {
+        unlockScores()}
     
+    @IBAction func lockScores(_ sender: Any) {
+        lockScores()}
     
+    @IBAction func resetScores(_ sender: Any) {
+        resetScores()}
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+//MARK Functions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToModeScreen" {
             let destinationVC = segue.destination as! ModeViewController
@@ -114,15 +116,15 @@ class MainController: UIViewController, UpdateScores {
             let destinationVC = segue.destination as! ModeViewController
             destinationVC.modeIntPassed = 3}}
     
-    override func viewDidLoad() {super.viewDidLoad();roundEdges(); updateScoresSituations()}
+    override func viewDidLoad() {super.viewDidLoad();roundEdges(); updateScoresSituations();lockScores()}
     
     func roundEdges() {
         playerScoresLabel.layer.masksToBounds = true;
-        playerScoresLabel.layer.cornerRadius = 7;
+        playerScoresLabel.layer.cornerRadius = cornerRadius;
         BasicModeLoadButton.layer.masksToBounds = true;
-        BasicModeLoadButton.layer.cornerRadius = 7;
-        ChooseOpponentsLoadButton.layer.cornerRadius = 7;
-        SameCharLoadButton.layer.cornerRadius = 7;
+        BasicModeLoadButton.layer.cornerRadius = cornerRadius;
+        ChooseOpponentsLoadButton.layer.cornerRadius = cornerRadius;
+        SameCharLoadButton.layer.cornerRadius = cornerRadius;
         chrisLabel.layer.masksToBounds = true;
         chrisScore.layer.masksToBounds = true;
         richLabel.layer.masksToBounds = true;
@@ -143,26 +145,32 @@ class MainController: UIViewController, UpdateScores {
         player3ScoreDecLabel.layer.masksToBounds = true;
         player4ScoreDecLabel.layer.masksToBounds = true;
         player5ScoreDecLabel.layer.masksToBounds = true;
-        chrisLabel.layer.cornerRadius = 7;
-        chrisScore.layer.cornerRadius = 7;
-        richLabel.layer.cornerRadius = 7;
-        richScore.layer.cornerRadius = 7;
-        jeffLabel.layer.cornerRadius = 7;
-        jeffScore.layer.cornerRadius = 7;
-        mattLabel.layer.cornerRadius = 7;
-        mattScore.layer.cornerRadius = 7;
-        katLabel.layer.cornerRadius = 7;
-        katScore.layer.cornerRadius = 7;
-        player1ScoreIncLabel.layer.cornerRadius = 7;
-        player2ScoreIncLabel.layer.cornerRadius = 7;
-        player3ScoreIncLabel.layer.cornerRadius = 7;
-        player4ScoreIncLabel.layer.cornerRadius = 7;
-        player5ScoreIncLabel.layer.cornerRadius = 7;
-        player1ScoreDecLabel.layer.cornerRadius = 7;
-        player2ScoreDecLabel.layer.cornerRadius = 7;
-        player3ScoreDecLabel.layer.cornerRadius = 7;
-        player4ScoreDecLabel.layer.cornerRadius = 7
-        player5ScoreDecLabel.layer.cornerRadius = 7}
+        chrisLabel.layer.cornerRadius = cornerRadius;
+        chrisScore.layer.cornerRadius = cornerRadius;
+        richLabel.layer.cornerRadius = cornerRadius;
+        richScore.layer.cornerRadius = cornerRadius;
+        jeffLabel.layer.cornerRadius = cornerRadius;
+        jeffScore.layer.cornerRadius = cornerRadius;
+        mattLabel.layer.cornerRadius = cornerRadius;
+        mattScore.layer.cornerRadius = cornerRadius;
+        katLabel.layer.cornerRadius = cornerRadius;
+        katScore.layer.cornerRadius = cornerRadius;
+        adjustScoresButton.layer.masksToBounds = true;
+        lockScoresButton.layer.masksToBounds = true;
+        resetScoresButton.layer.masksToBounds = true;
+        player1ScoreIncLabel.layer.cornerRadius = cornerRadius;
+        player2ScoreIncLabel.layer.cornerRadius = cornerRadius;
+        player3ScoreIncLabel.layer.cornerRadius = cornerRadius;
+        player4ScoreIncLabel.layer.cornerRadius = cornerRadius;
+        player5ScoreIncLabel.layer.cornerRadius = cornerRadius;
+        player1ScoreDecLabel.layer.cornerRadius = cornerRadius;
+        player2ScoreDecLabel.layer.cornerRadius = cornerRadius;
+        player3ScoreDecLabel.layer.cornerRadius = cornerRadius;
+        player4ScoreDecLabel.layer.cornerRadius = cornerRadius;
+        player5ScoreDecLabel.layer.cornerRadius = cornerRadius;
+        adjustScoresButton.layer.cornerRadius = cornerRadius;
+        lockScoresButton.layer.cornerRadius = cornerRadius;
+        resetScoresButton.layer.cornerRadius = cornerRadius}
     
     func updateScoresSituations() {
         if winnersInt == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
@@ -204,7 +212,40 @@ class MainController: UIViewController, UpdateScores {
         jeffScore.text = String(jeffScoreInt)
         mattScore.text = String(mattScoreInt)}
 
+    func resetScores(){
+        chrisScoreInt = 0
+        jeffScoreInt = 0
+        richScoreInt = 0
+        mattScoreInt = 0
+        chrisScore.text = String(chrisScoreInt)
+        richScore.text = String(richScoreInt)
+        jeffScore.text = String(jeffScoreInt)
+        mattScore.text = String(mattScoreInt)}
         
+    func lockScores(){
+        player1ScoreIncLabel.isEnabled = false;
+        player1ScoreDecLabel.isEnabled = false;
+        player2ScoreIncLabel.isEnabled = false;
+        player2ScoreDecLabel.isEnabled = false;
+        player3ScoreIncLabel.isEnabled = false;
+        player3ScoreDecLabel.isEnabled = false;
+        player4ScoreIncLabel.isEnabled = false;
+        player4ScoreDecLabel.isEnabled = false;
+        player5ScoreIncLabel.isEnabled = false;
+        player5ScoreDecLabel.isEnabled = false}
+    
+    func unlockScores(){
+        player1ScoreIncLabel.isEnabled = true;
+        player1ScoreDecLabel.isEnabled = true;
+        player2ScoreIncLabel.isEnabled = true;
+        player2ScoreDecLabel.isEnabled = true;
+        player3ScoreIncLabel.isEnabled = true;
+        player3ScoreDecLabel.isEnabled = true;
+        player4ScoreIncLabel.isEnabled = true;
+        player4ScoreDecLabel.isEnabled = true;
+        player5ScoreIncLabel.isEnabled = true;
+        player5ScoreDecLabel.isEnabled = true}
+    
     }
     
 
