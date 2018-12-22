@@ -65,6 +65,7 @@ class ModeViewController: UIViewController {
     var randomStage:Int = 0
     
     var modeIntPassed:Int?
+    var matchWinnersInt:Int?
     
     
 // Actions go here
@@ -79,8 +80,8 @@ class ModeViewController: UIViewController {
     @IBAction func Team1Button(_ sender: Any) {randomizeTeam1Characters()}
     
     @IBAction func Team1WinButton(_ sender: Any) {
-        let matchWinners = 42
-        delegate?.winnersSelected(winners: matchWinners)
+        matchWinners()
+        delegate?.winnersSelected(winners: matchWinnersInt ?? 0)
         self.dismiss(animated: true, completion: nil)}
     
     @IBAction func StageButton(_ sender: Any) {randomizeStage()}
@@ -100,6 +101,57 @@ class ModeViewController: UIViewController {
     
 // Functions go here
 // Don't forget to do if statements based on which mode you're in
+    
+    func matchWinners(){
+        if player1Label.text == "Chris" && player2Label.text == "Rich" {
+            matchWinnersInt = 12}
+        if player1Label.text == "Chris" && player2Label.text == "Jeff" {
+            matchWinnersInt = 13}
+        if player1Label.text == "Chris" && player2Label.text == "Matt" {
+            matchWinnersInt = 14}
+        if player1Label.text == "Rich" && player2Label.text == "Chris" {
+            matchWinnersInt = 21}
+        if player1Label.text == "Rich" && player2Label.text == "Jeff" {
+            matchWinnersInt = 23}
+        if player1Label.text == "Rich" && player2Label.text == "Matt" {
+            matchWinnersInt = 24}
+        if player1Label.text == "Jeff" && player2Label.text == "Chris" {
+            matchWinnersInt = 31}
+        if player1Label.text == "Jeff" && player2Label.text == "Rich" {
+            matchWinnersInt = 32}
+        if player1Label.text == "Jeff" && player2Label.text == "Matt" {
+            matchWinnersInt = 34}
+        if player1Label.text == "Matt" && player2Label.text == "Chris" {
+            matchWinnersInt = 41}
+        if player1Label.text == "Matt" && player2Label.text == "Rich" {
+            matchWinnersInt = 42}
+        if player1Label.text == "Matt" && player2Label.text == "Jeff" {
+            matchWinnersInt = 43}
+        if player2Label.text == "Chris" && player1Label.text == "Rich" {
+            matchWinnersInt = 12}
+        if player2Label.text == "Chris" && player1Label.text == "Jeff" {
+            matchWinnersInt = 13}
+        if player2Label.text == "Chris" && player1Label.text == "Matt" {
+            matchWinnersInt = 14}
+        if player2Label.text == "Rich" && player1Label.text == "Chris" {
+            matchWinnersInt = 21}
+        if player2Label.text == "Rich" && player1Label.text == "Jeff" {
+            matchWinnersInt = 23}
+        if player2Label.text == "Rich" && player1Label.text == "Matt" {
+            matchWinnersInt = 24}
+        if player2Label.text == "Jeff" && player1Label.text == "Chris" {
+            matchWinnersInt = 31}
+        if player2Label.text == "Jeff" && player1Label.text == "Rich" {
+            matchWinnersInt = 32}
+        if player2Label.text == "Jeff" && player1Label.text == "Matt" {
+            matchWinnersInt = 34}
+        if player2Label.text == "Matt" && player1Label.text == "Chris" {
+            matchWinnersInt = 41}
+        if player2Label.text == "Matt" && player1Label.text == "Rich" {
+            matchWinnersInt = 42}
+        if player2Label.text == "Matt" && player1Label.text == "Jeff" {
+            matchWinnersInt = 43}}
+    
     
     func hideButtons() {
         team1Button.isHidden = true;
