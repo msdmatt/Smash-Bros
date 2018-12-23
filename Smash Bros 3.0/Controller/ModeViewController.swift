@@ -83,6 +83,9 @@ class ModeViewController: UIViewController {
         else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
     }
     
+    @IBAction func HomeButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func ModeButton(_ sender: Any) {changeMode();disableScreen()}
     
     @IBAction func Team1Button(_ sender: Any) {randomizeTeam1Characters()}
