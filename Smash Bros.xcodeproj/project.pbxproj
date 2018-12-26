@@ -132,7 +132,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 211F630321C2012E00ED2305 /* Build configuration list for PBXProject "Smash Bros 3.0" */;
+			buildConfigurationList = 211F630321C2012E00ED2305 /* Build configuration list for PBXProject "Smash Bros" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -353,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		211F630321C2012E00ED2305 /* Build configuration list for PBXProject "Smash Bros 3.0" */ = {
+		211F630321C2012E00ED2305 /* Build configuration list for PBXProject "Smash Bros" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				211F631821C2012F00ED2305 /* Debug */,
