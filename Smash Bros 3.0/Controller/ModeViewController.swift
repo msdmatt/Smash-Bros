@@ -197,7 +197,7 @@ class ModeViewController: UIViewController {
         if player2Label.text == "Kat" && player1Label.text == "Matt" {
             matchWinnersInt = 54}}
     
-        func matchWinners2(){
+    func matchWinners2(){
         if player3Label.text == "Chris" && player4Label.text == "Rich" {
             matchWinnersInt = 12}
         if player3Label.text == "Chris" && player4Label.text == "Jeff" {
@@ -277,9 +277,7 @@ class ModeViewController: UIViewController {
         if player4Label.text == "Kat" && player3Label.text == "Jeff" {
             matchWinnersInt = 53}
         if player4Label.text == "Kat" && player3Label.text == "Matt" {
-            matchWinnersInt = 54}
-
-    }
+            matchWinnersInt = 54}}
     
     
     func hideButtons() {
