@@ -72,6 +72,7 @@ class ModeViewController: UIViewController {
 // Actions go here
     override func viewDidLoad() {super.viewDidLoad()
         adjustLabelsButtonsBorders()
+        hideButtons()
         disableScreen()
         if modeIntPassed == 1 {modeButton.setTitle("Teams", for: UIControl.State.normal)}
         else if modeIntPassed == 2 {modeButton.setTitle("Opponents", for: UIControl.State.normal)}
@@ -104,7 +105,8 @@ class ModeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)}
     
     @IBAction func LetsPlayButton(_ sender: Any) {
-        enableScreen();
+        enableScreen()
+        unhideButtons()
         if modeButton.currentTitle == "Teams" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
         else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
         else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
