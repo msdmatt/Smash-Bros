@@ -114,6 +114,9 @@ class MainController: UIViewController, UpdateScores {
         if segue.identifier == "goToModeScreen" {
             let destinationVC = segue.destination as! ModeViewController
             destinationVC.delegate = self}
+        if segue.identifier == "goToOtherModeScreen" {
+            let destinationVC = segue.destination as! OtherModeViewController
+            destinationVC.delegate = self}
         if segue.identifier == "goToModeScreen" && BasicModeLoadButton.isTouchInside == true {
             let destinationVC = segue.destination as! ModeViewController
             destinationVC.modeIntPassed = 1}
