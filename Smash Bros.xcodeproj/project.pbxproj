@@ -14,8 +14,8 @@
 		211F631621C2012F00ED2305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 211F631421C2012F00ED2305 /* LaunchScreen.storyboard */; };
 		211F631E21C201FE00ED2305 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F631D21C201FE00ED2305 /* ModeViewController.swift */; };
 		211F632221C2021C00ED2305 /* forReferenceOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211F632121C2021C00ED2305 /* forReferenceOnly.swift */; };
+		216979E021D8177D007797F6 /* OtherModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216979DF21D8177D007797F6 /* OtherModeViewController.swift */; };
 		2172525B21CEA75E0026D0DB /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2172525A21CEA75E0026D0DB /* Protocols.swift */; };
-		21F6708D21D7048900CEEA61 /* OtherModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F6708C21D7048900CEEA61 /* OtherModeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		211F631721C2012F00ED2305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		211F631D21C201FE00ED2305 /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		211F632121C2021C00ED2305 /* forReferenceOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forReferenceOnly.swift; sourceTree = "<group>"; };
+		216979DF21D8177D007797F6 /* OtherModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherModeViewController.swift; sourceTree = "<group>"; };
 		2172525A21CEA75E0026D0DB /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		21F6708C21D7048900CEEA61 /* OtherModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OtherModeViewController.swift; path = ../View/OtherModeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 			children = (
 				211F630D21C2012F00ED2305 /* MainController.swift */,
 				211F631D21C201FE00ED2305 /* ModeViewController.swift */,
-				21F6708C21D7048900CEEA61 /* OtherModeViewController.swift */,
+				216979DF21D8177D007797F6 /* OtherModeViewController.swift */,
 				2172525A21CEA75E0026D0DB /* Protocols.swift */,
 			);
 			path = Controller;
@@ -171,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F6708D21D7048900CEEA61 /* OtherModeViewController.swift in Sources */,
+				216979E021D8177D007797F6 /* OtherModeViewController.swift in Sources */,
 				2172525B21CEA75E0026D0DB /* Protocols.swift in Sources */,
 				211F630E21C2012F00ED2305 /* MainController.swift in Sources */,
 				211F631E21C201FE00ED2305 /* ModeViewController.swift in Sources */,
