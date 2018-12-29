@@ -40,7 +40,7 @@ class MainController: UIViewController, UpdateScores {
     @IBOutlet weak var lockScoresButton: UIButton!
     @IBOutlet weak var resetScoresButton: UIButton!
     
-    var cornerRadius:CGFloat = 7.00
+    var cornerRadius:CGFloat = 4.00
     var chrisScoreInt:Int = 0
     var richScoreInt:Int = 0
     var jeffScoreInt:Int = 0
