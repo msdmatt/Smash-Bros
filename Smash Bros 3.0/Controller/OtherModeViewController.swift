@@ -10,14 +10,8 @@ import UIKit
 
 class OtherModeViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        adjustLabelsButtonsBorders()
-        hideButtons()
-        enableScreen()
-        randomizeTeams();randomizeAllCharacter();randomizeStage()
-        disableScreen()}
     
+// Buttons and Labels from View Controller
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var modeButton: UIButton!
     @IBOutlet weak var team1WinButton: UIButton!
@@ -46,9 +40,52 @@ class OtherModeViewController: UIViewController {
     var delegate : UpdateScores?
     
     
+   
+// Variables and Constants
+    let characterImageArray = ["DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","Star"]
+    let playerArray = ["Chris","Rich","Jeff","Matt","Kat"]
+    var chrisLabel:String = "Chris"
+    var richLabel:String = "Rich"
+    var jeffLabel:String = "Jeff"
+    var mattLabel:String = "Matt"
+    var katLabel:String = "Kat"
+    let stageArray = ["Dreamland","HyruleCastle","PeachCastle","SaffronCity","SectorZ","YoshiIsland"]
+    var dreamlandLabel:String = "Kirby's Dreamland"
+    var hyruleCastleLabel:String = "Hyrule Castle"
+    var peachCastleLabel:String = "Peach's Castle"
+    var saffronCityLabel:String = "Saffron City"
+    var sectorZLabel:String = "Sector Z"
+    var yoshiIslandLabel:String = "Yoshi's Storybook"
+    var randomPlayer1Index:Int = 0
+    var randomPlayer2Index:Int = 0
+    var randomPlayer3Index:Int = 0
+    var randomPlayer4Index:Int = 0
+    var randomPlayer1CharImage:Int = 0
+    var randomPlayer1bCharImage:Int = 0
+    var randomPlayer2CharImage:Int = 0
+    var randomPlayer3CharImage:Int = 0
+    var randomPlayer3bCharImage:Int = 0
+    var randomPlayer4CharImage:Int = 0
+    var randomTeams:Int = 0
+    var randomStage:Int = 0
+    var cornerRadius:CGFloat = 3.00
+    
+    var modeIntPassed:Int?
+    var matchWinnersInt:Int?
+    var katPlays:Int?
+    
+
+// Actions go here
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        adjustLabelsButtonsBorders()
+        hideButtons()
+        enableScreen()
+        randomizeTeams();randomizeAllCharacter();randomizeStage()
+        disableScreen()}
+    
     @IBAction func homeButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+        dismiss(animated: true, completion: nil)}
     
     @IBAction func team1WinButton(_ sender: Any) {
         matchWinners1()
@@ -79,40 +116,11 @@ class OtherModeViewController: UIViewController {
         unhideButtons()
         randomizeTeams();randomizeAllCharacter();randomizeStage()}
     
-    // Variables and Constants
-    let characterImageArray = ["DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","Star"]
-    let playerArray = ["Chris","Rich","Jeff","Matt","Kat"]
-    var chrisLabel:String = "Chris"
-    var richLabel:String = "Rich"
-    var jeffLabel:String = "Jeff"
-    var mattLabel:String = "Matt"
-    var katLabel:String = "Kat"
-    let stageArray = ["Dreamland","HyruleCastle","PeachCastle","SaffronCity","SectorZ","YoshiIsland"]
-    var dreamlandLabel:String = "Kirby's Dreamland"
-    var hyruleCastleLabel:String = "Hyrule Castle"
-    var peachCastleLabel:String = "Peach's Castle"
-    var saffronCityLabel:String = "Saffron City"
-    var sectorZLabel:String = "Sector Z"
-    var yoshiIslandLabel:String = "Yoshi's Storybook"
-    var randomPlayer1Index:Int = 0
-    var randomPlayer2Index:Int = 0
-    var randomPlayer3Index:Int = 0
-    var randomPlayer4Index:Int = 0
-    var randomPlayer1CharImage:Int = 0
-    var randomPlayer1bCharImage:Int = 0
-    var randomPlayer2CharImage:Int = 0
-    var randomPlayer3CharImage:Int = 0
-    var randomPlayer3bCharImage:Int = 0
-    var randomPlayer4CharImage:Int = 0
-    var randomTeams:Int = 0
-    var randomStage:Int = 0
-    
-    var modeIntPassed:Int?
-    var matchWinnersInt:Int?
-    var katPlays:Int?
     
     
-    // Functions
+// Functions go here
+// Don't forget to do if statements based on which mode you're in
+    
     func matchWinners1(){
         if player1Label.text == "Chris" && player2Label.text == "Rich" {
             matchWinnersInt = 12}
@@ -321,43 +329,43 @@ class OtherModeViewController: UIViewController {
         player4Character.isHidden = false}
     
     func adjustLabelsButtonsBorders(){
-        homeButton.layer.cornerRadius = 7;
-        statsButton.layer.cornerRadius = 7;
-        letsPlayButton.layer.cornerRadius = 7;
-        team1WinButton.layer.cornerRadius = 7;
-        team2WinButton.layer.cornerRadius = 7;
+        homeButton.layer.cornerRadius = cornerRadius;
+        statsButton.layer.cornerRadius = cornerRadius;
+        letsPlayButton.layer.cornerRadius = cornerRadius;
+        team1WinButton.layer.cornerRadius = cornerRadius;
+        team2WinButton.layer.cornerRadius = cornerRadius;
         player1Label.layer.masksToBounds = true;
-        player1Label.layer.cornerRadius = 7;
+        player1Label.layer.cornerRadius = cornerRadius;
         player1Label.layer.maskedCorners = [.layerMinXMinYCorner];
         player2Label.layer.masksToBounds = true;
-        player2Label.layer.cornerRadius = 7;
+        player2Label.layer.cornerRadius = cornerRadius;
         player2Label.layer.maskedCorners = [.layerMaxXMinYCorner];
         player3Label.layer.masksToBounds = true;
-        player3Label.layer.cornerRadius = 7;
+        player3Label.layer.cornerRadius = cornerRadius;
         player3Label.layer.maskedCorners = [.layerMinXMinYCorner];
         player4Label.layer.masksToBounds = true;
-        player4Label.layer.cornerRadius = 7;
+        player4Label.layer.cornerRadius = cornerRadius;
         player4Label.layer.maskedCorners = [.layerMaxXMinYCorner];
         player1Character.layer.masksToBounds = true;
-        player1Character.layer.cornerRadius = 7;
+        player1Character.layer.cornerRadius = cornerRadius;
         player1Character.layer.maskedCorners = [.layerMinXMaxYCorner];
         player2Character.layer.masksToBounds = true;
-        player2Character.layer.cornerRadius = 7;
+        player2Character.layer.cornerRadius = cornerRadius;
         player2Character.layer.maskedCorners = [.layerMaxXMaxYCorner];
         player3Character.layer.masksToBounds = true;
-        player3Character.layer.cornerRadius = 7;
+        player3Character.layer.cornerRadius = cornerRadius;
         player3Character.layer.maskedCorners = [.layerMinXMaxYCorner];
         player4Character.layer.masksToBounds = true;
-        player4Character.layer.cornerRadius = 7;
+        player4Character.layer.cornerRadius = cornerRadius;
         player4Character.layer.maskedCorners = [.layerMaxXMaxYCorner];
         stageLabel.layer.masksToBounds = true;
-        stageLabel.layer.cornerRadius = 7;
+        stageLabel.layer.cornerRadius = cornerRadius;
         stageLabel.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner];
         stageImage.layer.masksToBounds = true;
-        stageImage.layer.cornerRadius = 7;
+        stageImage.layer.cornerRadius = cornerRadius;
         stageImage.layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         modeButton.layer.masksToBounds = true;
-        modeButton.layer.cornerRadius = 7}
+        modeButton.layer.cornerRadius = cornerRadius}
     
     func randomizeTeams(){
         randomPlayer1Index = Int.random(in: 0...3)
