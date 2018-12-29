@@ -728,6 +728,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="homeButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="gAc-ZS-zLr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMz-cs-3M3" userLabel="Win1">
                                         <rect key="frame" x="80.333333333333329" y="0.0" width="41.333333333333329" height="45"/>
@@ -738,6 +741,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="team1WinButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="Hv0-Jr-YNs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTP-Fs-Fkc">
                                         <rect key="frame" x="131.66666666666666" y="0.0" width="81.666666666666657" height="45"/>
@@ -748,6 +754,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="modeButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="bC2-GK-gZ7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YW-TT-CpR" userLabel="Win2">
                                         <rect key="frame" x="223.33333333333334" y="0.0" width="41.333333333333343" height="45"/>
@@ -758,6 +767,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="team2WinButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="PFX-Yo-o07"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-ci-b95">
                                         <rect key="frame" x="274.66666666666669" y="0.0" width="70.333333333333314" height="45"/>
@@ -768,6 +780,9 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="statsButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="oN0-Hz-0N7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -778,9 +793,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhj-9r-lCQ" userLabel="Team1View">
                                 <rect key="frame" x="22.666666666666657" y="139.66666666666666" width="330" height="129.99999999999997"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWx-JB-gcV" userLabel="Team1Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="170"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWx-JB-gcV" userLabel="Team1Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="130"/>
+                                        <connections>
+                                            <action selector="team1CharButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="iqC-PU-onA"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckP-kD-7hE" userLabel="Player1Label">
                                         <rect key="frame" x="0.0" y="0.0" width="165" height="20"/>
@@ -830,6 +847,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vWx-JB-gcV" secondAttribute="bottom" id="0ti-Vl-UJl"/>
                                     <constraint firstItem="UxB-mG-MHu" firstAttribute="leading" secondItem="lhj-9r-lCQ" secondAttribute="leading" id="1jD-ES-Rrr"/>
                                     <constraint firstAttribute="trailing" secondItem="l0v-vq-SGA" secondAttribute="trailing" id="6Ze-TE-mRV"/>
                                     <constraint firstAttribute="bottom" secondItem="QPG-3k-Gal" secondAttribute="bottom" id="DJR-jp-SaC"/>
@@ -842,7 +860,10 @@
                                     <constraint firstItem="ckP-kD-7hE" firstAttribute="leading" secondItem="lhj-9r-lCQ" secondAttribute="leading" id="cyG-fJ-MwY"/>
                                     <constraint firstAttribute="bottom" secondItem="UxB-mG-MHu" secondAttribute="bottom" id="fqg-gL-Kv0"/>
                                     <constraint firstAttribute="width" constant="330" id="hzC-u3-Q2X"/>
+                                    <constraint firstItem="vWx-JB-gcV" firstAttribute="top" secondItem="lhj-9r-lCQ" secondAttribute="top" id="qCr-vj-Jc8"/>
+                                    <constraint firstAttribute="trailing" secondItem="vWx-JB-gcV" secondAttribute="trailing" id="v9O-3V-vgi"/>
                                     <constraint firstItem="ckP-kD-7hE" firstAttribute="top" secondItem="lhj-9r-lCQ" secondAttribute="top" id="vid-oh-dn9"/>
+                                    <constraint firstItem="vWx-JB-gcV" firstAttribute="leading" secondItem="lhj-9r-lCQ" secondAttribute="leading" id="xtT-8x-cNM"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stage Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoW-U2-SZU" userLabel="StageLabel">
@@ -859,6 +880,9 @@
                                 <rect key="frame" x="10" y="314.66666666666669" width="355" height="183"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="stageButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="f7n-4b-wca"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wwn-d1-wAR" userLabel="StageImage">
                                 <rect key="frame" x="10" y="314.66666666666669" width="355" height="183"/>
@@ -879,6 +903,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="letsPlayButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="tt0-C1-Jjt"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0a-vY-nBt" userLabel="Team2View">
                                 <rect key="frame" x="22.666666666666657" y="517.66666666666663" width="330" height="130"/>
@@ -887,6 +914,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="130"/>
                                         <connections>
                                             <action selector="Team2Button:" destination="rOO-pa-pN1" eventType="touchUpInside" id="JEx-vV-TtD"/>
+                                            <action selector="team2CharButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="enG-rs-qxe"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alC-NT-big" userLabel="Player3Label">
@@ -985,12 +1013,34 @@
                         <viewLayoutGuide key="safeArea" id="iNj-RE-5Wc"/>
                     </view>
                     <connections>
+                        <outlet property="homeButton" destination="ioH-I6-25g" id="50B-ow-Ooo"/>
+                        <outlet property="letsPlayButton" destination="90j-GX-IjY" id="Ilu-lW-5TR"/>
+                        <outlet property="modeButton" destination="QTP-Fs-Fkc" id="VqV-a2-Acr"/>
+                        <outlet property="player1CharImage" destination="UxB-mG-MHu" id="Ack-v5-RHR"/>
+                        <outlet property="player1Label" destination="ckP-kD-7hE" id="Euw-Um-aeH"/>
+                        <outlet property="player1bCharImage" destination="MfY-Vo-1qz" id="fFq-2h-lYA"/>
+                        <outlet property="player1bCharacter" destination="MfY-Vo-1qz" id="Jjr-5i-DcP"/>
+                        <outlet property="player2CharImage" destination="QPG-3k-Gal" id="hlx-0P-xlA"/>
+                        <outlet property="player2Character" destination="QPG-3k-Gal" id="AmL-Yr-GSW"/>
+                        <outlet property="player2Label" destination="l0v-vq-SGA" id="hr5-vs-TpF"/>
+                        <outlet property="player3CharImage" destination="3lA-mg-noR" id="pJ1-Rh-cSL"/>
                         <outlet property="player3Character" destination="3lA-mg-noR" id="uFn-zr-E8o"/>
-                        <outlet property="player3Label" destination="alC-NT-big" id="Mba-zN-Htr"/>
+                        <outlet property="player3Label" destination="alC-NT-big" id="Lef-uB-LtO"/>
+                        <outlet property="player3bCharImage" destination="ogi-k2-kAm" id="eKn-5A-R6y"/>
+                        <outlet property="player3bCharacter" destination="ogi-k2-kAm" id="3tO-xF-lGd"/>
+                        <outlet property="player4CharImage" destination="BWc-rU-4Pp" id="rmo-vl-Yfz"/>
                         <outlet property="player4Character" destination="BWc-rU-4Pp" id="xYt-Qk-ETX"/>
-                        <outlet property="player4Label" destination="Lor-w3-MBZ" id="gbe-oL-40j"/>
+                        <outlet property="player4Label" destination="Lor-w3-MBZ" id="HqW-Hq-5qX"/>
+                        <outlet property="shuffleButton" destination="90j-GX-IjY" id="JUd-40-iTj"/>
+                        <outlet property="stageButton" destination="5Km-GC-CGD" id="j77-TQ-1og"/>
+                        <outlet property="stageImage" destination="Wwn-d1-wAR" id="jgJ-Dt-IM5"/>
+                        <outlet property="stageNameLabel" destination="OoW-U2-SZU" id="EY4-wA-mtB"/>
+                        <outlet property="statsButton" destination="BaW-ci-b95" id="CpI-Cj-W0R"/>
+                        <outlet property="team1Button" destination="vWx-JB-gcV" id="YjT-9s-WkU"/>
                         <outlet property="team1View" destination="lhj-9r-lCQ" id="0gm-0p-5Sz"/>
-                        <outlet property="team2Button" destination="GIX-pK-OXu" id="NHv-fX-zql"/>
+                        <outlet property="team1WinButton" destination="JMz-cs-3M3" id="D9r-Vd-Yes"/>
+                        <outlet property="team2Button" destination="GIX-pK-OXu" id="nUP-Li-G0C"/>
+                        <outlet property="team2WinButton" destination="0YW-TT-CpR" id="VkX-a7-UuA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU1-zx-2C9" userLabel="First Responder" sceneMemberID="firstResponder"/>
