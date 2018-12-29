@@ -39,6 +39,8 @@ class MainController: UIViewController, UpdateScores {
     @IBOutlet weak var adjustScoresButton: UIButton!
     @IBOutlet weak var lockScoresButton: UIButton!
     @IBOutlet weak var resetScoresButton: UIButton!
+    @IBOutlet weak var lastModeLabel: UILabel!
+    @IBOutlet weak var lastModeBlank: UILabel!
     
     var cornerRadius:CGFloat = 4.00
     var chrisScoreInt:Int = 0
@@ -55,18 +57,22 @@ class MainController: UIViewController, UpdateScores {
     
     @IBAction func BasicModeLoadAction(_ sender: Any) {
         lockScores()
+        lastModeBlank.text = "Teams"
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
     
     @IBAction func ChooseOpponentsAction(_ sender: Any) {
         lockScores()
+        lastModeBlank.text = "Opponents"
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
     
     @IBAction func SameCharAction(_ sender: Any) {
         lockScores()
+        lastModeBlank.text = "Same Character"
         performSegue(withIdentifier: "goToModeScreen", sender: self)}
     
     @IBAction func Threes(_ sender: Any) {
         lockScores()
+        lastModeBlank.text = "Three's"
         performSegue(withIdentifier: "goToOtherModeScreen", sender: self)}
     
     @IBAction func player1ScoreInc(_ sender: Any) {
@@ -183,7 +189,11 @@ class MainController: UIViewController, UpdateScores {
         player5ScoreDecLabel.layer.cornerRadius = cornerRadius;
         adjustScoresButton.layer.cornerRadius = cornerRadius;
         lockScoresButton.layer.cornerRadius = cornerRadius;
-        resetScoresButton.layer.cornerRadius = cornerRadius}
+        resetScoresButton.layer.cornerRadius = cornerRadius;
+        lastModeLabel.layer.masksToBounds = true;
+        lastModeBlank.layer.masksToBounds = true;
+        lastModeLabel.layer.cornerRadius = cornerRadius;
+        lastModeBlank.layer.cornerRadius = cornerRadius}
     
     func updateScoresSituations() {
         if winnersInt == 12 {chrisScoreInt = chrisScoreInt + 1; richScoreInt = richScoreInt + 1}
