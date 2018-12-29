@@ -31,7 +31,7 @@
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-or-Cfb" userLabel="ModesStack">
-                                <rect key="frame" x="10" y="572" width="355" height="196"/>
+                                <rect key="frame" x="10" y="504" width="355" height="264"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMM-kl-Ay6" customClass="basicModeButton">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="60"/>
@@ -70,6 +70,19 @@
                                         </state>
                                         <connections>
                                             <action selector="SameCharAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUt-wu-vrf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V09-AJ-z0m">
+                                        <rect key="frame" x="0.0" y="204" width="355" height="60"/>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Three's">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Threes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWs-Tu-B8O"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -369,6 +382,7 @@
                         <outlet property="BasicModeLoadButton" destination="TMM-kl-Ay6" id="umR-6Z-8jO"/>
                         <outlet property="ChooseOpponentsLoadButton" destination="pMI-5k-Agb" id="syv-ZP-ZdY"/>
                         <outlet property="SameCharLoadButton" destination="RWm-Nt-EAO" id="AAh-d4-Mt7"/>
+                        <outlet property="ThreesButton" destination="V09-AJ-z0m" id="vRY-nW-b2l"/>
                         <outlet property="adjustScoresButton" destination="x2z-2y-Vgd" id="VuZ-tU-k2p"/>
                         <outlet property="chrisLabel" destination="CVO-3u-gQC" id="RIm-0R-RBa"/>
                         <outlet property="chrisScore" destination="d48-8w-MAl" id="YvM-xB-vJz"/>
@@ -394,11 +408,12 @@
                         <outlet property="richLabel" destination="5b3-P9-ZEB" id="baM-5A-IJa"/>
                         <outlet property="richScore" destination="MM7-qg-Kq6" id="hHg-A0-BKn"/>
                         <segue destination="uxX-sf-tzv" kind="show" identifier="goToModeScreen" id="aW6-Ol-Vl5"/>
+                        <segue destination="rOO-pa-pN1" kind="show" identifier="goToOtherModeScreen" id="j5E-ux-5so"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="132"/>
+            <point key="canvasLocation" x="327" y="132"/>
         </scene>
         <!--BasicMode-->
         <scene sceneID="Drp-bL-8KX">
@@ -796,7 +811,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWx-JB-gcV" userLabel="Team1Button">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="130"/>
                                         <connections>
-                                            <action selector="team1CharButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="iqC-PU-onA"/>
+                                            <action selector="team1Button:" destination="rOO-pa-pN1" eventType="touchUpInside" id="3V0-NI-lXo"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckP-kD-7hE" userLabel="Player1Label">
@@ -913,8 +928,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIX-pK-OXu" userLabel="Team2Button">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="130"/>
                                         <connections>
-                                            <action selector="Team2Button:" destination="rOO-pa-pN1" eventType="touchUpInside" id="JEx-vV-TtD"/>
-                                            <action selector="team2CharButton:" destination="rOO-pa-pN1" eventType="touchUpInside" id="enG-rs-qxe"/>
+                                            <action selector="team2Button:" destination="rOO-pa-pN1" eventType="touchUpInside" id="yxW-ys-yLL"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alC-NT-big" userLabel="Player3Label">
@@ -1016,28 +1030,21 @@
                         <outlet property="homeButton" destination="ioH-I6-25g" id="50B-ow-Ooo"/>
                         <outlet property="letsPlayButton" destination="90j-GX-IjY" id="Ilu-lW-5TR"/>
                         <outlet property="modeButton" destination="QTP-Fs-Fkc" id="VqV-a2-Acr"/>
-                        <outlet property="player1CharImage" destination="UxB-mG-MHu" id="Ack-v5-RHR"/>
+                        <outlet property="player1Character" destination="UxB-mG-MHu" id="4Mc-xU-ffa"/>
                         <outlet property="player1Label" destination="ckP-kD-7hE" id="Euw-Um-aeH"/>
-                        <outlet property="player1bCharImage" destination="MfY-Vo-1qz" id="fFq-2h-lYA"/>
                         <outlet property="player1bCharacter" destination="MfY-Vo-1qz" id="Jjr-5i-DcP"/>
-                        <outlet property="player2CharImage" destination="QPG-3k-Gal" id="hlx-0P-xlA"/>
                         <outlet property="player2Character" destination="QPG-3k-Gal" id="AmL-Yr-GSW"/>
                         <outlet property="player2Label" destination="l0v-vq-SGA" id="hr5-vs-TpF"/>
-                        <outlet property="player3CharImage" destination="3lA-mg-noR" id="pJ1-Rh-cSL"/>
                         <outlet property="player3Character" destination="3lA-mg-noR" id="uFn-zr-E8o"/>
                         <outlet property="player3Label" destination="alC-NT-big" id="Lef-uB-LtO"/>
-                        <outlet property="player3bCharImage" destination="ogi-k2-kAm" id="eKn-5A-R6y"/>
                         <outlet property="player3bCharacter" destination="ogi-k2-kAm" id="3tO-xF-lGd"/>
-                        <outlet property="player4CharImage" destination="BWc-rU-4Pp" id="rmo-vl-Yfz"/>
                         <outlet property="player4Character" destination="BWc-rU-4Pp" id="xYt-Qk-ETX"/>
                         <outlet property="player4Label" destination="Lor-w3-MBZ" id="HqW-Hq-5qX"/>
-                        <outlet property="shuffleButton" destination="90j-GX-IjY" id="JUd-40-iTj"/>
                         <outlet property="stageButton" destination="5Km-GC-CGD" id="j77-TQ-1og"/>
                         <outlet property="stageImage" destination="Wwn-d1-wAR" id="jgJ-Dt-IM5"/>
-                        <outlet property="stageNameLabel" destination="OoW-U2-SZU" id="EY4-wA-mtB"/>
+                        <outlet property="stageLabel" destination="OoW-U2-SZU" id="159-0b-yY2"/>
                         <outlet property="statsButton" destination="BaW-ci-b95" id="CpI-Cj-W0R"/>
                         <outlet property="team1Button" destination="vWx-JB-gcV" id="YjT-9s-WkU"/>
-                        <outlet property="team1View" destination="lhj-9r-lCQ" id="0gm-0p-5Sz"/>
                         <outlet property="team1WinButton" destination="JMz-cs-3M3" id="D9r-Vd-Yes"/>
                         <outlet property="team2Button" destination="GIX-pK-OXu" id="nUP-Li-G0C"/>
                         <outlet property="team2WinButton" destination="0YW-TT-CpR" id="VkX-a7-UuA"/>
@@ -1045,7 +1052,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GU1-zx-2C9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="132"/>
+            <point key="canvasLocation" x="1084" y="856"/>
         </scene>
     </scenes>
 </document>
