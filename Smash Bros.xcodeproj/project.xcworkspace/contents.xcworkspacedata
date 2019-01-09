@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mattmbp2017/Desktop/Smash Bros 3.00/Smash Bros.xcodeproj">
+      location = "self:../Smash Bros">
    </FileRef>
 </Workspace>

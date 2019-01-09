@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		211F630821C2012F00ED2305 /* Smash Bros 3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash Bros 3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		211F630821C2012F00ED2305 /* Smash Bros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smash Bros.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		211F630B21C2012F00ED2305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		211F630D21C2012F00ED2305 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		211F631021C2012F00ED2305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		211F62FF21C2012E00ED2305 = {
 			isa = PBXGroup;
 			children = (
-				211F630A21C2012F00ED2305 /* Smash Bros 3.0 */,
+				211F630A21C2012F00ED2305 /* Smash Bros */,
 				211F630921C2012F00ED2305 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 		211F630921C2012F00ED2305 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				211F630821C2012F00ED2305 /* Smash Bros 3.0.app */,
+				211F630821C2012F00ED2305 /* Smash Bros.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		211F630A21C2012F00ED2305 /* Smash Bros 3.0 */ = {
+		211F630A21C2012F00ED2305 /* Smash Bros */ = {
 			isa = PBXGroup;
 			children = (
 				211F630B21C2012F00ED2305 /* AppDelegate.swift */,
@@ -70,7 +70,7 @@
 				211F631421C2012F00ED2305 /* LaunchScreen.storyboard */,
 				211F631721C2012F00ED2305 /* Info.plist */,
 			);
-			path = "Smash Bros 3.0";
+			path = "Smash Bros";
 			sourceTree = "<group>";
 		};
 		211F632321C202D100ED2305 /* References */ = {
@@ -117,7 +117,7 @@
 			);
 			name = "Smash Bros 3.0";
 			productName = "Smash Bros 3.0";
-			productReference = 211F630821C2012F00ED2305 /* Smash Bros 3.0.app */;
+			productReference = 211F630821C2012F00ED2305 /* Smash Bros.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z96TGN9JP9;
-				INFOPLIST_FILE = "Smash Bros 3.0/Info.plist";
+				INFOPLIST_FILE = "Smash Bros/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z96TGN9JP9;
-				INFOPLIST_FILE = "Smash Bros 3.0/Info.plist";
+				INFOPLIST_FILE = "Smash Bros/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,47 +1,44 @@
 //
-//  OtherModeViewController.swift
+//  ModeViewController.swift
 //  Smash Bros 3.0
 //
-//  Created by Matthew Disharoon on 12/28/18.
+//  Created by Matthew Disharoon on 12/12/18.
 //  Copyright © 2018 Matthew Disharoon. All rights reserved.
 //
 
 import UIKit
 
-class OtherModeViewController: UIViewController {
+class ModeViewController: UIViewController {
     
     
-// Buttons and Labels from View Controller
+// Buttons and Labels from ViewController
     @IBOutlet weak var homeButton: UIButton!
-    @IBOutlet weak var modeButton: UIButton!
-    @IBOutlet weak var team1WinButton: UIButton!
-    @IBOutlet weak var team2WinButton: UIButton!
     @IBOutlet weak var statsButton: UIButton!
-    
     @IBOutlet weak var team1Button: UIButton!
+    @IBOutlet weak var team1WinButton: UIButton!
+    @IBOutlet weak var stageButton: UIButton!
+    @IBOutlet weak var team2Button: UIButton!
+    @IBOutlet weak var team2WinButton: UIButton!
+    @IBOutlet weak var letsPlayButton: UIButton!
+    @IBOutlet weak var modeButton: UIButton!
+    
     @IBOutlet weak var player1Label: UILabel!
     @IBOutlet weak var player2Label: UILabel!
     @IBOutlet weak var player1Character: UIImageView!
-    @IBOutlet weak var player1bCharacter: UIImageView!
     @IBOutlet weak var player2Character: UIImageView!
-    
     @IBOutlet weak var stageLabel: UILabel!
     @IBOutlet weak var stageImage: UIImageView!
-    @IBOutlet weak var stageButton: UIButton!
-    
-    @IBOutlet weak var team2Button: UIButton!
     @IBOutlet weak var player3Label: UILabel!
     @IBOutlet weak var player4Label: UILabel!
     @IBOutlet weak var player3Character: UIImageView!
-    @IBOutlet weak var player3bCharacter: UIImageView!
     @IBOutlet weak var player4Character: UIImageView!
+    @IBOutlet weak var team1View: UIView!
+    @IBOutlet weak var team2View: UIView!
     
-    @IBOutlet weak var letsPlayButton: UIButton!
     var delegate : UpdateScores?
     
-    
-   
-// Variables and Constants
+
+// Constants and Variables
     let characterImageArray = ["DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","DonkeyKong","Falcon","Fox","Jigglypuff","Kirby","Link","Luigi","Mario","Ness","Pikachu","Samus","Yoshi","Star"]
     let playerArray = ["Chris","Rich","Jeff","Matt","Kat"]
     var chrisLabel:String = "Chris"
@@ -61,61 +58,61 @@ class OtherModeViewController: UIViewController {
     var randomPlayer3Index:Int = 0
     var randomPlayer4Index:Int = 0
     var randomPlayer1CharImage:Int = 0
-    var randomPlayer1bCharImage:Int = 0
     var randomPlayer2CharImage:Int = 0
     var randomPlayer3CharImage:Int = 0
-    var randomPlayer3bCharImage:Int = 0
     var randomPlayer4CharImage:Int = 0
     var randomTeams:Int = 0
     var randomStage:Int = 0
-    var cornerRadius:CGFloat = 3.00
+    var cornerRadius:CGFloat = 0.00
     
     var modeIntPassed:Int?
     var matchWinnersInt:Int?
     var katPlays:Int?
     
-
+    
 // Actions go here
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidLoad() {super.viewDidLoad()
         adjustLabelsButtonsBorders()
         hideButtons()
+        disableScreen()
+        if modeIntPassed == 1 {modeButton.setTitle("Teams", for: UIControl.State.normal)}
+        else if modeIntPassed == 2 {modeButton.setTitle("Opponents", for: UIControl.State.normal)}
+        else if modeIntPassed == 3 {modeButton.setTitle("Same character", for: UIControl.State.normal)}
         enableScreen()
-        randomizeTeams();randomizeAllCharacter();randomizeStage()
-        disableScreen()}
+        if modeButton.currentTitle == "Teams" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
+        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}}
     
-    @IBAction func homeButton(_ sender: Any) {
+    @IBAction func HomeButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)}
     
-    @IBAction func team1WinButton(_ sender: Any) {
+    @IBAction func ModeButton(_ sender: Any) {changeMode();disableScreen()}
+    
+    @IBAction func Team1Button(_ sender: Any) {randomizeTeam1Characters()}
+    
+    @IBAction func Team1WinButton(_ sender: Any) {
         matchWinners1()
         delegate?.winnersSelected(winners: matchWinnersInt ?? 0)
         self.dismiss(animated: true, completion: nil)}
     
-    @IBAction func modeButton(_ sender: Any) {}
+    @IBAction func StageButton(_ sender: Any) {randomizeStage()}
     
-    @IBAction func team2WinButton(_ sender: Any) {
+    @IBAction func Team2Button(_ sender: Any) {randomizeTeam2Characters()}
+    
+    @IBAction func Team2WinButton(_ sender: Any) {
         matchWinners2()
         delegate?.winnersSelected(winners: matchWinnersInt ?? 0)
         self.dismiss(animated: true, completion: nil)}
     
-    @IBAction func statsButton(_ sender: Any) {
-    }
-    
-    @IBAction func team1Button(_ sender: Any) {
-        randomizeTeam1Characters()}
-    
-    @IBAction func stageButton(_ sender: Any) {
-        randomizeStage()}
-    
-    @IBAction func team2Button(_ sender: Any) {
-        randomizeTeam2Characters()}
-    
-    @IBAction func letsPlayButton(_ sender: Any) {
+    @IBAction func LetsPlayButton(_ sender: Any) {
         enableScreen()
         unhideButtons()
-        randomizeTeams();randomizeAllCharacter();randomizeStage()}
-    
+        if modeButton.currentTitle == "Teams" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Opponents" {randomizeTeams();randomizeAllCharacter();randomizeStage()}
+        else if modeButton.currentTitle == "Same character" {randomizeTeams(); sameCharacters();randomizeStage()}
+        else if modeButton.currentTitle == "Worst character" {randomizeTeams();randomizeAllCharacter();randomizeStage()}}
+
     
     
 // Functions go here
@@ -292,7 +289,7 @@ class OtherModeViewController: UIViewController {
         stageButton.isHidden = true;
         team1Button.isHidden = true;
         team2Button.isHidden = true}
-    
+        
     func unhideButtons(){
         team1Button.isHidden = false;
         team2Button.isHidden = false;
@@ -308,10 +305,8 @@ class OtherModeViewController: UIViewController {
         stageLabel.isHidden = true;
         stageImage.isHidden = true;
         player1Character.isHidden = true;
-        player1bCharacter.isHidden = true;
         player2Character.isHidden = true;
         player3Character.isHidden = true;
-        player3bCharacter.isHidden = true;
         player4Character.isHidden = true}
     
     func unHideImages(){
@@ -322,10 +317,8 @@ class OtherModeViewController: UIViewController {
         stageLabel.isHidden = false;
         stageImage.isHidden = false;
         player1Character.isHidden = false;
-        player1bCharacter.isHidden = false;
         player2Character.isHidden = false;
         player3Character.isHidden = false;
-        player3bCharacter.isHidden = false;
         player4Character.isHidden = false}
     
     func adjustLabelsButtonsBorders(){
@@ -399,53 +392,49 @@ class OtherModeViewController: UIViewController {
         if player2Label.text == player3Label.text {randomizeTeams()}
         if player2Label.text == player4Label.text {randomizeTeams()}
         if player3Label.text == player4Label.text {randomizeTeams()}}
-    
+
     func randomizeAllCharacter(){
-        randomizeTeam1Characters()
-        randomizeTeam2Characters()}
-    
-    func randomizeTeam1Characters() {
         randomPlayer1CharImage = Int.random(in: 0...48)
         player1Character.image = UIImage(named: characterImageArray[randomPlayer1CharImage])
-        randomPlayer1bCharImage = Int.random(in: 0...48)
-        player1bCharacter.image = UIImage(named: characterImageArray[randomPlayer1bCharImage])
         randomPlayer2CharImage = Int.random(in: 0...48)
         player2Character.image = UIImage(named: characterImageArray[randomPlayer2CharImage])
-        if player1Character.image == player1bCharacter.image {randomizeTeam1Characters()}
-        if player1Character.image == player2Character.image {randomizeTeam1Characters()}
-        if player1Character.image == player3Character.image {randomizeTeam1Characters()}
-        if player1Character.image == player3bCharacter.image {randomizeTeam1Characters()}
-        if player1Character.image == player4Character.image {randomizeTeam1Characters()}
-        if player1bCharacter.image == player3Character.image {randomizeTeam1Characters()}
-        if player1bCharacter.image == player3bCharacter.image {randomizeTeam1Characters()}
-        if player1bCharacter.image == player4Character.image {randomizeTeam1Characters()}
-        if player2Character.image == player1Character.image {randomizeTeam1Characters()}
-        if player2Character.image == player1bCharacter.image {randomizeTeam1Characters()}
-        if player2Character.image == player3Character.image {randomizeTeam1Characters()}
-        if player2Character.image == player3bCharacter.image {randomizeTeam1Characters()}
-        if player2Character.image == player4Character.image {randomizeTeam1Characters()}}
-    
-    func randomizeTeam2Characters() {
         randomPlayer3CharImage = Int.random(in: 0...48)
         player3Character.image = UIImage(named: characterImageArray[randomPlayer3CharImage])
-        randomPlayer3bCharImage = Int.random(in: 0...48)
-        player3bCharacter.image = UIImage(named: characterImageArray[randomPlayer3bCharImage])
+        randomPlayer4CharImage = Int.random(in: 0...48)
+        player4Character.image = UIImage(named: characterImageArray[randomPlayer4CharImage])
+        if player1Character.image == player2Character.image {randomizeAllCharacter()}
+        if player1Character.image == player3Character.image {randomizeAllCharacter()}
+        if player1Character.image == player4Character.image {randomizeAllCharacter()}
+        if player2Character.image == player3Character.image {randomizeAllCharacter()}
+        if player2Character.image == player4Character.image {randomizeAllCharacter()}
+        if player3Character.image == player4Character.image {randomizeAllCharacter()}}
+    
+    func randomizeTeam1Characters() {
+        if modeButton.currentTitle == "Teams" || modeButton.currentTitle == "Opponents" || modeButton.currentTitle == "Worst character" {
+        randomPlayer1CharImage = Int.random(in: 0...48)
+        player1Character.image = UIImage(named: characterImageArray[randomPlayer1CharImage])
+        randomPlayer2CharImage = Int.random(in: 0...48)
+        player2Character.image = UIImage(named: characterImageArray[randomPlayer2CharImage])
+        if player1Character.image == player3Character.image {randomizeTeam1Characters()}
+        if player1Character.image == player4Character.image {randomizeTeam1Characters()}
+        if player2Character.image == player1Character.image {randomizeTeam1Characters()}
+        if player2Character.image == player3Character.image {randomizeTeam1Characters()}
+            if player2Character.image == player4Character.image {randomizeTeam1Characters()}}
+        else {sameCharacters()}}
+    
+    func randomizeTeam2Characters() {
+        if modeButton.currentTitle == "Teams" || modeButton.currentTitle == "Opponents" || modeButton.currentTitle == "Worst character" {
+        randomPlayer3CharImage = Int.random(in: 0...48)
+        player3Character.image = UIImage(named: characterImageArray[randomPlayer3CharImage])
         randomPlayer4CharImage = Int.random(in: 0...48)
         player4Character.image = UIImage(named: characterImageArray[randomPlayer4CharImage])
         if player3Character.image == player1Character.image {randomizeTeam2Characters()}
-        if player3Character.image == player1bCharacter.image {randomizeTeam2Characters()}
         if player3Character.image == player2Character.image {randomizeTeam2Characters()}
-        if player3Character.image == player3bCharacter.image {randomizeTeam2Characters()}
-        if player3Character.image == player4Character.image {randomizeTeam2Characters()}
-        if player3bCharacter.image == player1Character.image {randomizeTeam2Characters()}
-        if player3bCharacter.image == player1bCharacter.image {randomizeTeam2Characters()}
-        if player3bCharacter.image == player2Character.image {randomizeTeam2Characters()}
         if player4Character.image == player3Character.image {randomizeTeam2Characters()}
-        if player4Character.image == player3bCharacter.image {randomizeTeam2Characters()}
         if player4Character.image == player1Character.image {randomizeTeam2Characters()}
-        if player4Character.image == player1bCharacter.image {randomizeTeam2Characters()}
-        if player4Character.image == player2Character.image {randomizeTeam2Characters()}}
-    
+            if player4Character.image == player2Character.image {randomizeTeam2Characters()}}
+        else {sameCharacters()}}
+
     func randomizeStage() {
         randomStage = Int.random(in: 0...5)
         stageImage.image = UIImage(named: stageArray[randomStage])
@@ -455,6 +444,23 @@ class OtherModeViewController: UIViewController {
         if randomStage == 3 {stageLabel.text = saffronCityLabel}
         if randomStage == 4 {stageLabel.text = sectorZLabel}
         if randomStage == 5 {stageLabel.text = yoshiIslandLabel}}
+
+    func sameCharacters () {
+        randomPlayer1CharImage = Int.random(in: 0...11)
+        player1Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])
+        player2Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])
+        player3Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])
+        player4Character.image = UIImage(named:characterImageArray[randomPlayer1CharImage])}
+    
+    func changeMode() {
+        unhideButtons();
+        if modeButton.currentTitle == "Teams" {
+            modeButton.setTitle("Opponents", for: .normal)}
+        else if modeButton.currentTitle == "Opponents" {
+            modeButton.setTitle("Same character", for: .normal)}
+        else if modeButton.currentTitle == "Same character" {
+            modeButton.setTitle("Teams", for: .normal)}}
+//      else {self.modeButton.setTitle("Teams", for: .normal)}}
     
     func disableScreen(){
         team1Button.isEnabled = false;
@@ -465,5 +471,6 @@ class OtherModeViewController: UIViewController {
         team1Button.isEnabled = true;
         team2Button.isEnabled = true;
         stageButton.isEnabled = true}
-    
-}
+        
+    }
+
